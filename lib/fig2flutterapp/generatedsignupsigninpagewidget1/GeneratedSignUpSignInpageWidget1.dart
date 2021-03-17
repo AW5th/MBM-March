@@ -148,6 +148,9 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1>  {
       return 'Log In Error: ' + e.toString();
     }
   }
+
+  /*
+  //ORANGE SIGN UP PAGE
     @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -174,8 +177,8 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1>  {
             ),
        ),
     );
-  }
-  /*
+  } */
+
   @override
   Widget build(BuildContext context) {
 
@@ -190,13 +193,13 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1>  {
                 alignment: Alignment.center,
                 overflow: Overflow.visible,
                 children: [
-                  /*
                   ClipRRect(
                     borderRadius: BorderRadius.zero,
                     child: Container(
                       color: Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
+                  /*
                   Positioned(
                     left: 32.0,
                     top: 524.0,
@@ -205,7 +208,7 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1>  {
                     width: 308.0,
                     height: 52.0,
                     child: GeneratedGroup7Widget(),
-                  ),
+                  ), */
                   Positioned(
                     left: 17.0,
                     top: 231.0,
@@ -250,7 +253,7 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1>  {
                     width: 350.0,
                     height: 40.0,
                     child: GeneratedConfirmPasswordWidget(),
-                  ), */
+                  ),
                   Positioned(
                     left: 0.0,
                     top: 0.0,
@@ -288,5 +291,5 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1>  {
                 ]),
           ),
         ));
-  } */
+  }
 }
