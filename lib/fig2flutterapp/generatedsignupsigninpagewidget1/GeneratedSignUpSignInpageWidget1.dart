@@ -255,6 +255,7 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1>  {
                     child: GeneratedConfirmPasswordWidget(),
                   ),
                   Positioned(
+                    //ok
                     left: 0.0,
                     top: 0.0,
                     right: 0.0,
