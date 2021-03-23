@@ -6,7 +6,7 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 
 import 'amplifyconfiguration.dart';
 
-import 'package:flutter_app_two/fig2flutterapp/loginPage/loginPage.dart';
+
 import 'package:flutter_app_two/fig2flutterapp/generatedloadingpagewidget/GeneratedLoadingPageWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget/GeneratedSignUpSignInpageWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/loginPage.dart';
