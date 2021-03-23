@@ -22,12 +22,12 @@ import 'package:flutter_app_two/fig2flutterapp/generatedarrowshort_upwidget/Gene
 import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget3/GeneratedDashboardZachWidget3.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedmessagingwidget/GeneratedMessagingWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedmessagingzachwidget/GeneratedMessagingZachWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget/GeneratedProfileMycontentWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget1/GeneratedProfileMycontentWidget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/GeneratedProfileMycontentWidget2.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileotherusercontentwidget/GeneratedProfileOtherusercontentWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofilelikedwidget/GeneratedProfileLikedWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/GeneratedProfileEditandSettingsWidget.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget/ProfileMain.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget1/ProfileUploadSound.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/ProfileUploadCoverArt.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedprofileotherusercontentwidget/OtherUserProfile.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedprofilelikedwidget/ProfileMyLiked.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/ProfileEditandSettings.dart';
 import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget4/GeneratedDashboardZachWidget4.dart';
 import 'fig2flutterapp/generateddashboardzachwidget5/GeneratedDashboardZachWidget5.dart';
 
@@ -86,18 +86,18 @@ class _MyAppState extends State<MyApp> {
             GeneratedMessagingWidget(),
         '/GeneratedMessagingZachWidget': (context) =>
             GeneratedMessagingZachWidget(),
-        '/GeneratedProfileMycontentWidget': (context) =>
-            GeneratedProfileMycontentWidget(),
-        '/GeneratedProfileMycontentWidget1': (context) =>
-            GeneratedProfileMycontentWidget1(),
-        '/GeneratedProfileMycontentWidget2': (context) =>
-            GeneratedProfileMycontentWidget2(),
-        '/GeneratedProfileOtherusercontentWidget': (context) =>
-            GeneratedProfileOtherusercontentWidget(),
-        '/GeneratedProfileLikedWidget': (context) =>
-            GeneratedProfileLikedWidget(),
-        '/GeneratedProfileEditandSettingsWidget': (context) =>
-            GeneratedProfileEditandSettingsWidget(),
+        '/ProfileMain': (context) =>
+            ProfileMain(),
+        '/ProfileUploadSound': (context) =>
+            ProfileUploadSound(),
+        '/ProfileUploadCoverArt': (context) =>
+            ProfileUploadCoverArt(),
+        '/OtherUserProfile': (context) =>
+            OtherUserProfile(),
+        '/ProfileMyLiked': (context) =>
+            ProfileMyLiked(),
+        '/ProfileEditandSettings': (context) =>
+            ProfileEditandSettings(),
         '/GeneratedDashboardZachWidget4': (context) =>
             GeneratedDashboardZachWidget4(),
         '/GeneratedDashboardZachWidget5': (context) =>
