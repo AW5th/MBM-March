@@ -14,7 +14,7 @@ class GeneratedLogInWidget extends StatelessWidget {
         height: 0.9166666666666666,
         fontSize: 24.0,
         fontFamily: 'Roboto',
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w400,
         color: Color.fromARGB(255, 255, 255, 255),
 
          letterSpacing: -0.40799999237060547, 

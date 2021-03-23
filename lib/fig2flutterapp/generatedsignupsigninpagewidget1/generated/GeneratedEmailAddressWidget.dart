@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/GeneratedSignUpSignInpageWidget1.dart';
 
-/* Text Email Address
+/* Email Address Textbox
   */
+final _dataController = TextEditingController();
+
 class GeneratedEmailAddressWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
