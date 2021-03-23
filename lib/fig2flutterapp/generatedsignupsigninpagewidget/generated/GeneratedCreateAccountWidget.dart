@@ -7,7 +7,7 @@ class GeneratedCreateAccountWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      '''Join In''',
+      '''Join  In''',
       overflow: TextOverflow.visible,
       textAlign: TextAlign.center,
       style: TextStyle(
