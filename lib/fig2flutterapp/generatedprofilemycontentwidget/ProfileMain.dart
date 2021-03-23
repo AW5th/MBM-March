@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget/generated/GeneratedLabelTitleWidget2.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget/generated/ListenCount.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/UploadContentButton.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget/generated/UserInfo.dart';
@@ -127,7 +127,7 @@ class ProfileMain extends StatelessWidget {
                     x: 0.00,
                     y: -91.50,
                     z: 0,
-                    child: GeneratedLabelTitleWidget2()),
+                    child: ListenCount()),
               )
             ]),
       ),
