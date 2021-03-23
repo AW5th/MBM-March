@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget/generated/GeneratedLabelTitleWidget2.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/UploadContentButton.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget/generated/GeneratedGroup1538Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget/generated/GeneratedGroup5Widget1.dart';
@@ -66,7 +67,7 @@ class ProfileMain extends StatelessWidget {
                 bottom: null,
                 width: 308.0,
                 height: 52.0,
-                child: GeneratedGroup5Widget1(),
+                child: UploadContentButton(),
               ),
               Positioned(
                 left: 1.0,

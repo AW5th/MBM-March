@@ -5,6 +5,7 @@ import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget1/
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget1/generated/GeneratedGroup1483Widget1.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget1/generated/GeneratedGroup5Widget2.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget1/generated/GeneratedGroup6Widget3.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/UploadContentButton.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget1/generated/GeneratedGroup1523Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget1/generated/GeneratedTitleWidget9.dart';
@@ -118,7 +119,7 @@ class ProfileUploadSound extends StatelessWidget {
                 bottom: null,
                 width: 308.0,
                 height: 52.0,
-                child: GeneratedGroup5Widget2(),
+                child: UploadContentButton(),
               ),
               Positioned(
                 left: 1.0,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/GeneratedIcon1024x1024FullWidget17.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/GeneratedGroup6Widget4.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/GeneratedGroup5Widget3.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/UploadContentButton.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/GeneratedHomeIndicatorWidget18.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/GeneratedEditeditWidget4.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
@@ -119,7 +119,7 @@ class ProfileUploadCoverArt extends StatelessWidget {
                 bottom: null,
                 width: 308.0,
                 height: 52.0,
-                child: GeneratedGroup5Widget3(),
+                child: UploadContentButton(),
               ),
               Positioned(
                 left: 1.0,
