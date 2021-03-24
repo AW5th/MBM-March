@@ -147,7 +147,7 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1>  {
     }
   }
 
-
+/*
   //ORANGE SIGN UP PAGE
     @override
   Widget build(BuildContext context) {
@@ -176,8 +176,8 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1>  {
        ),
     );
   }
+*/
 
-  /*
   @override
   Widget build(BuildContext context) {
 
@@ -290,5 +290,5 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1>  {
                 ]),
           ),
         ));
-  } */
+  }
 }
