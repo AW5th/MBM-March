@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> {
         '/loginPage': (context) =>
             loginPage(),
          '/GeneratedSignUpSignInpageWidget1': (context) =>
-            loginPage(),
+            GeneratedSignUpSignInpageWidget1(),
         '/GeneratedSignUpSignInpageWidget2': (context) =>
             GeneratedSignUpSignInpageWidget2(),
         '/GeneratedSignUpSignInpageWidget3': (context) =>
