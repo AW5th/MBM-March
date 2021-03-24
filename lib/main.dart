@@ -9,7 +9,7 @@ import 'amplifyconfiguration.dart';
 import 'package:flutter_app_two/fig2flutterapp/loginPage/loginPage.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedloadingpagewidget/GeneratedLoadingPageWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget/GeneratedSignUpSignInpageWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/GeneratedSignUpSignInpageWidget1.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/loginPage.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget2/GeneratedSignUpSignInpageWidget2.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget3/GeneratedSignUpSignInpageWidget3.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget4/GeneratedSignUpSignInpageWidget4.dart';
@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> {
         '/loginPage': (context) =>
             loginPage(),
          '/GeneratedSignUpSignInpageWidget1': (context) =>
-            GeneratedSignUpSignInpageWidget1(),
+            loginPage(),
         '/GeneratedSignUpSignInpageWidget2': (context) =>
             GeneratedSignUpSignInpageWidget2(),
         '/GeneratedSignUpSignInpageWidget3': (context) =>

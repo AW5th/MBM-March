@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/GeneratedSignUpSignInpageWidget1.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/loginPage.dart';
 
 /* Email Address Textbox
   */
