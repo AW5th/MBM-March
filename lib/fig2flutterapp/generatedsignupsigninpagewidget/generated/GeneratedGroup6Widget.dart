@@ -20,6 +20,7 @@ class GeneratedGroup6Widget extends StatelessWidget {
             alignment: Alignment.center,
             overflow: Overflow.visible,
             children: [
+              //Button Colors
               Positioned(
                 left: 0.0,
                 top: 0.0,
@@ -29,6 +30,7 @@ class GeneratedGroup6Widget extends StatelessWidget {
                 height: 52.0,
                 child: GeneratedGroup4Widget(),
               ),
+              //Button text
               Positioned(
                 left: 50.0,
                 top: 14.0,

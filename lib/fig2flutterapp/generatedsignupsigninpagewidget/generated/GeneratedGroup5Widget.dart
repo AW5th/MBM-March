@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget/generated/GeneratedGroup4Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget/generated/GeneratedLogInWidget.dart';
 
-/* Login Buttom
-  */
+/* Login Button  */
 class GeneratedGroup5Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,6 +17,7 @@ class GeneratedGroup5Widget extends StatelessWidget {
           alignment: Alignment.center,
           overflow: Overflow.visible,
           children: [
+            //Button Colors
             Positioned(
               left: 0.0,
               top: 0.0,
@@ -27,6 +27,7 @@ class GeneratedGroup5Widget extends StatelessWidget {
               height: 52.0,
               child: GeneratedGroup4Widget(),
             ),
+            //Button text
             Positioned(
               left: 73.0,
               top: 14.0,

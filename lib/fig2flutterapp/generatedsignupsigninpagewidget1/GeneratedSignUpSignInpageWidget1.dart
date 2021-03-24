@@ -20,22 +20,21 @@ import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedEmailAddressWidget1.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedIcon1024x1024FullWidget2.dart';
 //import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedGroup7Widget.dart'
-/* Registration Page
-  */
+/* Registration   Page  */
 
 void main() {
   runApp(MaterialApp(
-    home: loginPage(),
+    home: GeneratedSignUpSignInpageWidget1(),
   ));
 }
 
-class loginPage extends StatefulWidget {
+class GeneratedSignUpSignInpageWidget1 extends StatefulWidget {
   @override
   MyApp createState() => MyApp();
 }
 
 
-class MyApp extends State<loginPage>  {
+class MyApp extends State<GeneratedSignUpSignInpageWidget1>  {
   // gives our app awareness about whether we are succesfully connected to the cloud
   bool _amplifyConfigured = false;
   // Instantiate Amplify
@@ -148,7 +147,7 @@ class MyApp extends State<loginPage>  {
     }
   }
 
-  /*
+
   //ORANGE SIGN UP PAGE
     @override
   Widget build(BuildContext context) {
@@ -176,8 +175,9 @@ class MyApp extends State<loginPage>  {
             ),
        ),
     );
-  } */
+  }
 
+  /*
   @override
   Widget build(BuildContext context) {
 
@@ -198,7 +198,6 @@ class MyApp extends State<loginPage>  {
                       color: Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
-                  /*
                   Positioned(
                     left: 32.0,
                     top: 524.0,
@@ -207,7 +206,7 @@ class MyApp extends State<loginPage>  {
                     width: 308.0,
                     height: 52.0,
                     child: GeneratedGroup7Widget(),
-                  ), */
+                  ),
                   Positioned(
                     left: 17.0,
                     top: 231.0,
@@ -291,5 +290,5 @@ class MyApp extends State<loginPage>  {
                 ]),
           ),
         ));
-  }
+  } */
 }
