@@ -29,32 +29,6 @@ const amplifyconfig = ''' {
                     "Default": {
                         "authenticationFlowType": "USER_SRP_AUTH"
                     }
-                },
-                "AppSync": {
-                    "Default": {
-                        "ApiUrl": "https://hd4kstwubfanngwfufdbxout44.appsync-api.us-west-2.amazonaws.com/graphql",
-                        "Region": "us-west-2",
-                        "AuthMode": "AMAZON_COGNITO_USER_POOLS",
-                        "ClientDatabasePrefix": "fig2flutterv01_AMAZON_COGNITO_USER_POOLS"
-                    },
-                    "fig2flutterv01_AWS_IAM": {
-                        "ApiUrl": "https://hd4kstwubfanngwfufdbxout44.appsync-api.us-west-2.amazonaws.com/graphql",
-                        "Region": "us-west-2",
-                        "AuthMode": "AWS_IAM",
-                        "ClientDatabasePrefix": "fig2flutterv01_AWS_IAM"
-                    }
-                }
-            }
-        }
-    },
-    "api": {
-        "plugins": {
-            "awsAPIPlugin": {
-                "fig2flutterv01": {
-                    "endpointType": "GraphQL",
-                    "endpoint": "https://hd4kstwubfanngwfufdbxout44.appsync-api.us-west-2.amazonaws.com/graphql",
-                    "region": "us-west-2",
-                    "authorizationType": "AMAZON_COGNITO_USER_POOLS"
                 }
             }
         }

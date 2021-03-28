@@ -9,7 +9,7 @@ import 'amplifyconfiguration.dart';
 import 'package:flutter_app_two/fig2flutterapp/loginPage/loginPage.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedloadingpagewidget/GeneratedLoadingPageWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget/GeneratedSignUpSignInpageWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/loginPage.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/registrationPage.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget2/GeneratedSignUpSignInpageWidget2.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget3/GeneratedSignUpSignInpageWidget3.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget4/GeneratedSignUpSignInpageWidget4.dart';
@@ -31,7 +31,6 @@ import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswi
 import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget4/GeneratedDashboardZachWidget4.dart';
 import 'fig2flutterapp/generateddashboardzachwidget5/GeneratedDashboardZachWidget5.dart';
 
-
 void main() {
   runApp(MaterialApp(
     home: MyApp(),
@@ -44,7 +43,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -58,9 +56,8 @@ class _MyAppState extends State<MyApp> {
             GeneratedLoadingPageWidget(),
         '/GeneratedSignUpSignInpageWidget': (context) =>
             GeneratedSignUpSignInpageWidget(),
-        '/loginPage': (context) =>
-            loginPage(),
-         '/GeneratedSignUpSignInpageWidget1': (context) =>
+        '/loginPage': (context) => loginPage(),
+        '/GeneratedSignUpSignInpageWidget1': (context) =>
             GeneratedSignUpSignInpageWidget1(),
         '/GeneratedSignUpSignInpageWidget2': (context) =>
             GeneratedSignUpSignInpageWidget2(),
@@ -82,22 +79,15 @@ class _MyAppState extends State<MyApp> {
             GeneratedArrowshort_upWidget(),
         '/GeneratedDashboardZachWidget3': (context) =>
             GeneratedDashboardZachWidget3(),
-        '/GeneratedMessagingWidget': (context) =>
-            GeneratedMessagingWidget(),
+        '/GeneratedMessagingWidget': (context) => GeneratedMessagingWidget(),
         '/GeneratedMessagingZachWidget': (context) =>
             GeneratedMessagingZachWidget(),
-        '/ProfileMain': (context) =>
-            ProfileMain(),
-        '/ProfileUploadSound': (context) =>
-            ProfileUploadSound(),
-        '/ProfileUploadCoverArt': (context) =>
-            ProfileUploadCoverArt(),
-        '/OtherUserProfile': (context) =>
-            OtherUserProfile(),
-        '/ProfileMyLiked': (context) =>
-            ProfileMyLiked(),
-        '/ProfileEditandSettings': (context) =>
-            ProfileEditandSettings(),
+        '/ProfileMain': (context) => ProfileMain(),
+        '/ProfileUploadSound': (context) => ProfileUploadSound(),
+        '/ProfileUploadCoverArt': (context) => ProfileUploadCoverArt(),
+        '/OtherUserProfile': (context) => OtherUserProfile(),
+        '/ProfileMyLiked': (context) => ProfileMyLiked(),
+        '/ProfileEditandSettings': (context) => ProfileEditandSettings(),
         '/GeneratedDashboardZachWidget4': (context) =>
             GeneratedDashboardZachWidget4(),
         '/GeneratedDashboardZachWidget5': (context) =>
