@@ -43,6 +43,12 @@ const amplifyconfig = ''' {
                         "AuthMode": "AWS_IAM",
                         "ClientDatabasePrefix": "fig2flutterv01_AWS_IAM"
                     }
+                },
+                "S3TransferUtility": {
+                    "Default": {
+                        "Bucket": "mbmcontent183207-dev",
+                        "Region": "us-west-2"
+                    }
                 }
             }
         }
@@ -56,6 +62,15 @@ const amplifyconfig = ''' {
                     "region": "us-west-2",
                     "authorizationType": "AMAZON_COGNITO_USER_POOLS"
                 }
+            }
+        }
+    },
+    "storage": {
+        "plugins": {
+            "awsS3StoragePlugin": {
+                "bucket": "mbmcontent183207-dev",
+                "region": "us-west-2",
+                "defaultAccessLevel": "guest"
             }
         }
     }

@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
+
+
 import 'amplifyconfiguration.dart';
 
 import 'package:flutter_app_two/fig2flutterapp/loginPage/loginPage.dart';
@@ -30,6 +32,9 @@ import 'package:flutter_app_two/fig2flutterapp/generatedprofilelikedwidget/Profi
 import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/ProfileEditandSettings.dart';
 import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget4/GeneratedDashboardZachWidget4.dart';
 import 'fig2flutterapp/generateddashboardzachwidget5/GeneratedDashboardZachWidget5.dart';
+
+import 'package:file_picker/file_picker.dart';
+import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 
 void main() {
   runApp(MaterialApp(
