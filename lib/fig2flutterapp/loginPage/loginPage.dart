@@ -130,67 +130,6 @@ class MyApp extends State<loginPage> {
   }
 
 
-  /*
-  Future<String> _signIn(LoginData data) async {
-    try {
-      SignInResult res = await Amplify.Auth.signIn(
-        username: data.name,
-        password: data.password,
-      );
-      setState(() {
-        isSignedIn = res.isSignedIn;
-      });
-      if (isSignedIn){
-        Navigator.pushNamed(context, '/GeneratedCometitionsWidget');
-        /*
-        Alert(
-            context: context,
-            type: AlertType.success,
-            title: "You've succesfully logged in",
-            buttons: [
-              DialogButton(
-                child: Text(
-                  "Next",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
-                onPressed: () => Navigator.pushNamed(context,'/GeneratedDashboardZachWidget'),
-                width: 120,
-              )
-            ],).show(); */
-      }
-    } on AuthError catch (e) {
-      print(e);
-      Alert(context: context, type: AlertType.error, title: "Your email/password is invalid. Please try again.")
-          .show();
-      return 'Log In Error: ' + e.toString();
-    }
-  } */
-/*
-  void _signIn(BuildContext context) async {
-    // Sign out before in case a user is already signed in
-    // If a user is already signed in - Amplify.Auth.signIn will throw an exception
-    try {
-      await Amplify.Auth.signOut();
-    } on AuthError catch (e) {
-      print(e);
-    }
-
-    try {
-      SignInResult res = await Amplify.Auth.signIn(
-          username: emailController.text.trim(),
-          password: passwordController.text.trim());
-      _go_to_NextScreen(context);
-    } on AuthError catch (e) {
-      setState(() {
-        _signUpError = e.cause;
-        _signUpExceptions.clear();
-        e.exceptionList.forEach((el) {
-          _signUpExceptions.add(el.exception);
-        });
-      });
-    }
-  } */
-
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -263,7 +202,7 @@ class MyApp extends State<loginPage> {
                 height: 40.0,
                 child: TextFormField(
                   decoration: new InputDecoration(
-                    labelText: "Enter Email",
+                    labelText: "Enter Email/Username",
                     fillColor: Colors.white,
                     border: new OutlineInputBorder(
                       borderRadius: new BorderRadius.circular(25.0),
