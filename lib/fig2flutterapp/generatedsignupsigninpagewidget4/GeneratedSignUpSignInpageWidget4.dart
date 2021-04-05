@@ -28,7 +28,7 @@ class GeneratedSignUpSignInpageWidget4 extends StatelessWidget {
                   color: Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
-
+              //skip
               Positioned(
                 left: 287.0,
                 top: 61.0,
@@ -38,6 +38,7 @@ class GeneratedSignUpSignInpageWidget4 extends StatelessWidget {
                 height: 30.0,
                 child: GeneratedSkipWidget(),
               ),
+              //All four buttons
               Positioned(
                 left: 38.0,
                 top: 169.0,
@@ -47,6 +48,7 @@ class GeneratedSignUpSignInpageWidget4 extends StatelessWidget {
                 height: 523.0,
                 child: GeneratedGroup1534Widget(),
               ),
+              //logo
               Positioned(
                 left: 0.0,
                 top: 0.0,
