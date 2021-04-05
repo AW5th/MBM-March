@@ -28,15 +28,7 @@ class GeneratedSignUpSignInpageWidget4 extends StatelessWidget {
                   color: Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
-              Positioned(
-                left: 0.0,
-                top: 0.0,
-                right: 0.0,
-                bottom: null,
-                width: null,
-                height: 44.0,
-                child: GeneratedStatusBarWidget(),
-              ),
+
               Positioned(
                 left: 287.0,
                 top: 61.0,
