@@ -74,48 +74,7 @@ class Listener_Selected extends StatelessWidget {
                 bottom: null,
                 width: 199.0,
                 height: 52.0,
-                child: Container(
-                  width: 199.0,
-                  height: 52.0,
-                  child: Stack(
-                      fit: StackFit.expand,
-                      alignment: Alignment.center,
-                      overflow: Overflow.visible,
-                      children: [
-                        //Artist Button
-                        Positioned(
-                          left: 0.0,
-                          top: 0.0,
-                          right: null,
-                          bottom: null,
-                          width: 199.0,
-                          height: 52.0,
-                          child: Artist_Button(),
-                        ),
-                        Positioned(
-                          left: 47.81171417236328,
-                          top: 14.0,
-                          right: null,
-                          bottom: null,
-                          width: 109.0227279663086,
-                          height: 30.0,
-                          child: Text(
-                            '''Artist''',
-                            overflow: TextOverflow.visible,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              height: 0.9166666666666666,
-                              fontSize: 24.0,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w400,
-                              color: Color.fromARGB(255, 150, 150, 150),
-
-                              /* letterSpacing: -0.40799999237060547, */
-                            ),
-                          ),
-                        ),
-                      ]),
-                ),
+                child: Artist_Button(),
               ),
               //Listener button
               Positioned(
