@@ -12,8 +12,9 @@ import 'package:flutter_app_two/fig2flutterapp/loginPage/loginPage.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedloadingpagewidget/GeneratedLoadingPageWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget/GeneratedSignUpSignInpageWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/registrationPage.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget2/GeneratedSignUpSignInpageWidget2.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget3/GeneratedSignUpSignInpageWidget3.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Selected/Artist_Selected.dart';
+import 'package:flutter_app_two/fig2flutterapp/Listener_Selected/Listener_Selected.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget4/GeneratedSignUpSignInpageWidget4.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/GeneratedSignUpSignInpageWidget5.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedcometitionswidget/GeneratedCometitionsWidget.dart';
@@ -61,13 +62,16 @@ class _MyAppState extends State<MyApp> {
             GeneratedLoadingPageWidget(),
         '/GeneratedSignUpSignInpageWidget': (context) =>
             GeneratedSignUpSignInpageWidget(),
-        '/loginPage': (context) => loginPage(),
+        '/loginPage': (context) =>
+            loginPage(),
         '/GeneratedSignUpSignInpageWidget1': (context) =>
             GeneratedSignUpSignInpageWidget1(),
-        '/GeneratedSignUpSignInpageWidget2': (context) =>
-            GeneratedSignUpSignInpageWidget2(),
-        '/GeneratedSignUpSignInpageWidget3': (context) =>
-            GeneratedSignUpSignInpageWidget3(),
+        '/Artist_Listener': (context) =>
+            Artist_Listener(),
+        '/Artist_Selected': (context) =>
+            Artist_Selected(),
+        '/Listener_Selected': (context) =>
+            Listener_Selected(),
         '/GeneratedSignUpSignInpageWidget4': (context) =>
             GeneratedSignUpSignInpageWidget4(),
         '/GeneratedSignUpSignInpageWidget5': (context) =>

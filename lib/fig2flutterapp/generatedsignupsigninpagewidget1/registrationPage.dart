@@ -5,7 +5,7 @@ import 'dart:developer';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget2/GeneratedSignUpSignInpageWidget2.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedGroup4Widget2.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedNextWidget.dart';
@@ -42,6 +42,9 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1> {
   bool _amplifyConfigured = false;
   // Instantiate Amplify
   Amplify amplifyInstance = Amplify();
+
+  //Key for validaiton(textformfield)
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   // controllers for text input
   final emailController = TextEditingController();
@@ -140,12 +143,11 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1> {
   }
 */
 
-
   void _go_to_NextScreen(BuildContext context) {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (_) {
-          return GeneratedSignUpSignInpageWidget2();
+          return Artist_Listener();
         },
       ),
     );
@@ -225,6 +227,17 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1> {
   }
 */
 
+  String validatePassword(String value) {
+    if (value.isEmpty) {
+      return "* Required";
+    } else if (value.length < 6) {
+      return "Password should be atleast 6 characters";
+    } else if (value.length > 15) {
+      return "Password should not be greater than 15 characters";
+    } else
+      return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -257,7 +270,7 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1> {
                   onTap: () => _signUp(context),
                   /*
                   onTap: () => Navigator.pushNamed(
-                      context, '/GeneratedSignUpSignInpageWidget2'), */
+                      context, '/Artist_Listener'), */
                   child: Container(
                     width: 308.0,
                     height: 52.0,
@@ -307,13 +320,6 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1> {
                     ),
                     //fillColor: Colors.green
                   ),
-                  validator: (val) {
-                    if (val.length == 0) {
-                      return "Email cannot be empty";
-                    } else {
-                      return null;
-                    }
-                  },
                   controller: emailController,
                   keyboardType: TextInputType.emailAddress,
                   style: new TextStyle(
@@ -349,13 +355,7 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1> {
                     ),
                     //fillColor: Colors.green
                   ),
-                  validator: (val) {
-                    if (val.length == 0) {
-                      return "Username cannot be empty";
-                    } else {
-                      return null;
-                    }
-                  },
+                  validator: validatePassword,
                   controller: usernameController,
                   keyboardType: TextInputType.name,
                   style: new TextStyle(
@@ -401,13 +401,7 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1> {
                     ),
                     //fillColor: Colors.green
                   ),
-                  validator: (val) {
-                    if (val.length == 0) {
-                      return "Password cannot be empty";
-                    } else {
-                      return null;
-                    }
-                  },
+                  validator: validatePassword,
                   controller: passwordController,
                   keyboardType: TextInputType.visiblePassword,
                   style: new TextStyle(
@@ -434,13 +428,7 @@ class MyApp extends State<GeneratedSignUpSignInpageWidget1> {
                     ),
                     //fillColor: Colors.green
                   ),
-                  validator: (val) {
-                    if (val.length == 0) {
-                      return "Password cannot be empty";
-                    } else {
-                      return null;
-                    }
-                  },
+                  validator: validatePassword,
                   controller: confirmPasswordController,
                   keyboardType: TextInputType.visiblePassword,
                   style: new TextStyle(

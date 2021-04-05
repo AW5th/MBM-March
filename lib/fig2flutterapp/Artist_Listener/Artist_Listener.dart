@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget3/generated/GeneratedIcon1024x1024FullWidget4.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget3/generated/GeneratedGroup8Widget1.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedIcon1024x1024FullWidget3.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget3/generated/GeneratedGroup9Widget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget3/generated/GeneratedIamaanWidget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget3/generated/GeneratedGroup7Widget2.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/Artist_Button.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedGroup7Widget1.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedIamaanWidget.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/Listener_Button.dart';
 
-/* Artist Selected  */
-class GeneratedSignUpSignInpageWidget3 extends StatelessWidget {
+/* Artist_Listener */
+class Artist_Listener extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -27,6 +27,7 @@ class GeneratedSignUpSignInpageWidget3 extends StatelessWidget {
                   color: Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
+              //Logo
               Positioned(
                 left: 0.0,
                 top: 0.0,
@@ -49,11 +50,12 @@ class GeneratedSignUpSignInpageWidget3 extends StatelessWidget {
                         child: Container(
                           width: width,
                           height: height,
-                          child: GeneratedIcon1024x1024FullWidget4(),
+                          child: GeneratedIcon1024x1024FullWidget3(),
                         ))
                   ]);
                 }),
               ),
+              //I Am Text
               Positioned(
                 left: 34.0,
                 top: 154.0,
@@ -61,8 +63,9 @@ class GeneratedSignUpSignInpageWidget3 extends StatelessWidget {
                 bottom: null,
                 width: 149.0,
                 height: 24.0,
-                child: GeneratedIamaanWidget1(),
+                child: GeneratedIamaanWidget(),
               ),
+              //Artist_Button
               Positioned(
                 left: 88.0,
                 top: 219.0,
@@ -70,8 +73,9 @@ class GeneratedSignUpSignInpageWidget3 extends StatelessWidget {
                 bottom: null,
                 width: 199.0,
                 height: 52.0,
-                child: GeneratedGroup8Widget1(),
+                child: Artist_Button(),
               ),
+              //Listener
               Positioned(
                 left: 88.0,
                 top: 290.0,
@@ -79,8 +83,9 @@ class GeneratedSignUpSignInpageWidget3 extends StatelessWidget {
                 bottom: null,
                 width: 199.0,
                 height: 52.0,
-                child: GeneratedGroup9Widget1(),
+                child: Listener_Button(),
               ),
+              //Next Button
               Positioned(
                 left: 34.0,
                 top: 490.0,
@@ -88,7 +93,7 @@ class GeneratedSignUpSignInpageWidget3 extends StatelessWidget {
                 bottom: null,
                 width: 308.0,
                 height: 52.0,
-                child: GeneratedGroup7Widget2(),
+                child: GeneratedGroup7Widget1(),
               )
             ]),
       ),

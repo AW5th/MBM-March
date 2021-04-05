@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedGroup4Widget2.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedNextWidget.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedGroup4Widget4.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedListenerWidget.dart';
 
-/* The Next Button
-  */
-
-class GeneratedGroup7Widget extends StatelessWidget {
-
+/* Listener button  */
+class Listener_Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () =>
-          Navigator.pushNamed(context, '/Artist_Listener'),
+      onTap: () => Navigator.pushNamed(context, '/Listener_Selected'),
       child: Container(
-        width: 308.0,
+        width: 199.0,
         height: 52.0,
         child: Stack(
             fit: StackFit.expand,
@@ -25,18 +21,18 @@ class GeneratedGroup7Widget extends StatelessWidget {
                 top: 0.0,
                 right: null,
                 bottom: null,
-                width: 308.0,
+                width: 199.0,
                 height: 52.0,
-                child: GeneratedGroup4Widget2(),
+                child: GeneratedGroup4Widget4(),
               ),
               Positioned(
-                left: 74.0,
+                left: 47.81171417236328,
                 top: 14.0,
                 right: null,
                 bottom: null,
-                width: 166.0,
+                width: 109.0227279663086,
                 height: 30.0,
-                child: GeneratedNextWidget(),
+                child: GeneratedListenerWidget(),
               )
             ]),
       ),

@@ -5,7 +5,7 @@ import 'package:flutter_login/flutter_login.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget2/GeneratedSignUpSignInpageWidget2.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedEmailAddressWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedFrame1452Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedLine26Widget.dart';
@@ -222,7 +222,7 @@ class MyApp extends State<loginPage> {
                   onTap: () => _signIn(context),
                   /*
                   onTap: () => Navigator.pushNamed(
-                      context, '/GeneratedSignUpSignInpageWidget2'), */
+                      context, '/Artist_Listener'), */
                   child: Container(
                     width: 308.0,
                     height: 52.0,
