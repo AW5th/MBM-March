@@ -8,47 +8,51 @@ import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget4/
 class GeneratedGenreSelect1Widget2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 298.0,
-      height: 103.0,
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Color.fromARGB(63, 0, 0, 0),
-            offset: Offset(0.0, 2.0),
-            blurRadius: 4.0,
-          ),
-          BoxShadow(
-            color: Color.fromARGB(63, 0, 0, 0),
-            offset: Offset(0.0, -2.0),
-            blurRadius: 4.0,
-          )
-        ],
-      ),
-      child: Stack(
-          fit: StackFit.expand,
-          alignment: Alignment.center,
-          overflow: Overflow.visible,
-          children: [
-            Positioned(
-              left: 0.0,
-              top: 0.0,
-              right: null,
-              bottom: null,
-              width: 298.0,
-              height: 103.0,
-              child: GeneratedMaskGroupWidget2(),
+    return GestureDetector(
+      onTap: () =>
+        Navigator.pushNamed(context, '/GeneratedSignUpSignInpageWidget5'),
+       child: Container(
+        width: 298.0,
+        height: 103.0,
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Color.fromARGB(63, 0, 0, 0),
+              offset: Offset(0.0, 2.0),
+              blurRadius: 4.0,
             ),
-            Positioned(
-              left: 38.0,
-              top: 39.0,
-              right: null,
-              bottom: null,
-              width: 211.0,
-              height: 25.0,
-              child: GeneratedGroup1527Widget2(),
+            BoxShadow(
+              color: Color.fromARGB(63, 0, 0, 0),
+              offset: Offset(0.0, -2.0),
+              blurRadius: 4.0,
+            )
+          ],
+        ),
+        child: Stack(
+            fit: StackFit.expand,
+            alignment: Alignment.center,
+            overflow: Overflow.visible,
+            children: [
+              Positioned(
+                left: 0.0,
+                top: 0.0,
+                right: null,
+                bottom: null,
+                width: 298.0,
+                height: 103.0,
+                child: GeneratedMaskGroupWidget2(),
+              ),
+              Positioned(
+                left: 38.0,
+                top: 39.0,
+                right: null,
+                bottom: null,
+                width: 211.0,
+                height: 25.0,
+                child: GeneratedGroup1527Widget2(),
             )
           ]),
+    ),
     );
   }
 }

@@ -28,6 +28,15 @@ class GeneratedBatteryWidget extends StatelessWidget {
             ),
             Positioned(
               left: null,
+              top: 0.0,
+              right: 2.3280372619628906,
+              bottom: null,
+              width: 22.0,
+              height: 11.333333015441895,
+              child: GeneratedBorderWidget(),
+            ),
+            Positioned(
+              left: null,
               top: 3.6666667461395264,
               right: -7.152557373046875e-7,
               bottom: null,
