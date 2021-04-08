@@ -13,7 +13,7 @@ import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedNextWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedGroup7Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedLine27Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedcometitionswidget/GeneratedCometitionsWidget.dart';
+import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/Feed_Dashboard.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/generated/GeneratedSignUpWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/loginPage/generated/GeneratedLogInWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/loginPage/generated/Login_Next_Button.dart';
@@ -98,7 +98,7 @@ class MyApp extends State<loginPage> {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (_) {
-          return GeneratedCometitionsWidget();
+          return Feed_Dashboard();
         },
       ),
     );

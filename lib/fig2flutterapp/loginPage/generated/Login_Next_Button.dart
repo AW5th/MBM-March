@@ -10,7 +10,7 @@ class Login_Next_Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () =>
-          Navigator.pushNamed(context, '/GeneratedCometitionsWidget'),
+          Navigator.pushNamed(context, '/Feed_Dashboard'),
       child: Container(
         width: 308.0,
         height: 52.0,

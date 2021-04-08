@@ -15,10 +15,10 @@ import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget1/
 import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
 import 'package:flutter_app_two/fig2flutterapp/Artist_Selected/Artist_Selected.dart';
 import 'package:flutter_app_two/fig2flutterapp/Listener_Selected/Listener_Selected.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget4/GeneratedSignUpSignInpageWidget4.dart';
+import 'package:flutter_app_two/fig2flutterapp/Artist_Type/Artist_Type.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/GeneratedSignUpSignInpageWidget5.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedcometitionswidget/GeneratedCometitionsWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget/GeneratedDashboardZachWidget.dart';
+import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/Feed_Dashboard.dart';
+import 'package:flutter_app_two/fig2flutterapp/Profile_Page/Profile_Page.dart';
 import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget1/GeneratedDashboardZachWidget1.dart';
 import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget2/GeneratedDashboardZachWidget2.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedarrowshort_upwidget/GeneratedArrowshort_upWidget.dart';
@@ -72,14 +72,14 @@ class _MyAppState extends State<MyApp> {
             Artist_Selected(),
         '/Listener_Selected': (context) =>
             Listener_Selected(),
-        '/GeneratedSignUpSignInpageWidget4': (context) =>
-            GeneratedSignUpSignInpageWidget4(),
+        '/Artist_Type': (context) =>
+            Artist_Type(),
         '/GeneratedSignUpSignInpageWidget5': (context) =>
             GeneratedSignUpSignInpageWidget5(),
-        '/GeneratedCometitionsWidget': (context) =>
-            GeneratedCometitionsWidget(),
-        '/GeneratedDashboardZachWidget': (context) =>
-            GeneratedDashboardZachWidget(),
+        '/Feed_Dashboard': (context) =>
+            Feed_Dashboard(),
+        '/Profile_Page': (context) =>
+            Profile_Page(),
         '/GeneratedDashboardZachWidget1': (context) =>
             GeneratedDashboardZachWidget1(),
         '/GeneratedDashboardZachWidget2': (context) =>

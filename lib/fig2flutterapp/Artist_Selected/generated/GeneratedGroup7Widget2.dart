@@ -10,7 +10,7 @@ class GeneratedGroup7Widget2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () =>
-          Navigator.pushNamed(context, '/GeneratedSignUpSignInpageWidget4'),
+          Navigator.pushNamed(context, '/Artist_Type'),
       child: Container(
         width: 308.0,
         height: 52.0,
