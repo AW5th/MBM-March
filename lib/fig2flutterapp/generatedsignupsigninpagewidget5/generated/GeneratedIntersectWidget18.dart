@@ -29,8 +29,8 @@ class GeneratedIntersectWidget18 extends StatelessWidget {
             endX: 78.88009937230801,
             endY: 16.054670264411357,
             colors: [
-              Color.fromARGB(255, 255, 213, 106),
-              Color.fromARGB(255, 255, 121, 0)
+              Color.fromARGB(255, 150, 150, 150),
+              Color.fromARGB(255, 150, 150, 150)
             ],
             colorStops: [0.0, 1.0],
           ),

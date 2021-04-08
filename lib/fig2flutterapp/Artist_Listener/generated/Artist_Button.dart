@@ -36,15 +36,7 @@ class Artist_Button extends StatelessWidget {
                 height: 30.0,
                 child: GeneratedArtistWidget(),
               ),
-              Positioned(
-                left: 47.81171417236328,
-                top: 14.0,
-                right: null,
-                bottom: null,
-                width: 109.0227279663086,
-                height: 30.0,
-                child: GeneratedArtistWidget1(),
-              )
+
             ]),
       ),
     );

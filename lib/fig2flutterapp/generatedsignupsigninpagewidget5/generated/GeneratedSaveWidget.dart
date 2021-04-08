@@ -7,7 +7,7 @@ class GeneratedSaveWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      '''Save''',
+      'Save',
       overflow: TextOverflow.visible,
       textAlign: TextAlign.center,
       style: TextStyle(

@@ -7,7 +7,7 @@ class GeneratedSkipWidget1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      '''Skip''',
+      'Skip',
       overflow: TextOverflow.visible,
       textAlign: TextAlign.center,
       style: TextStyle(

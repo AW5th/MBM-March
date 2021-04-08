@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/GeneratedGroup4Widget17.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/LatinButton.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/GeneratedLatinWidget.dart';
 
 /* Group Group 21

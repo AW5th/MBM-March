@@ -12,7 +12,7 @@ import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/GeneratedSkipWidget1.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/GeneratedGroup20Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/GeneratedGroup11Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/GeneratedGroup22Widget.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/FunkButton.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/GeneratedGenreWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/GeneratedGroup21Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/GeneratedGroup14Widget.dart';

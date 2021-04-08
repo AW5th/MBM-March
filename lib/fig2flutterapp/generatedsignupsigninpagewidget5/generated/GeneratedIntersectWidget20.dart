@@ -11,18 +11,7 @@ class GeneratedIntersectWidget20 extends StatelessWidget {
       width: 308.0,
       height: 52.0,
       decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Color.fromARGB(63, 0, 0, 0),
-            offset: Offset(2.0, 2.0),
-            blurRadius: 8.0,
-          ),
-          BoxShadow(
-            color: Color.fromARGB(63, 0, 0, 0),
-            offset: Offset(-2.0, -2.0),
-            blurRadius: 8.0,
-          )
-        ],
+
       ),
       child: SvgWidget(painters: [
         SvgPathPainter.fill()

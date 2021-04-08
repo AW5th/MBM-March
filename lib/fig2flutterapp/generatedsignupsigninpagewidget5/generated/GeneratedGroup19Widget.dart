@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/GeneratedGroup4Widget20.dart';
+import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/JazzButton.dart';
 import 'package:flutter_app_two/fig2flutterapp/generatedsignupsigninpagewidget5/generated/GeneratedJazzWidget.dart';
 
 /* Group Group 19

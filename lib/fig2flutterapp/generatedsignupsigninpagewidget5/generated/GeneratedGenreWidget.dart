@@ -6,7 +6,7 @@ class GeneratedGenreWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      '''Genre''',
+      'Genre',
       overflow: TextOverflow.visible,
       textAlign: TextAlign.left,
       style: TextStyle(

@@ -14,8 +14,7 @@ class GeneratedLatinWidget extends StatelessWidget {
         height: 0.9166667181481112,
         fontSize: 15.437185287475586,
         fontFamily: 'Roboto',
-        fontWeight: FontWeight.w400,
-        color: Color.fromARGB(255, 150, 150, 150),
+
 
         /* letterSpacing: -0.26243215799331665, */
       ),
