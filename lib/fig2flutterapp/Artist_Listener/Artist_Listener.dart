@@ -7,6 +7,7 @@ import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/Generat
 import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/Listener_Button.dart';
 
 /* Artist_Listener */
+/*
 class Artist_Listener extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -98,5 +99,67 @@ class Artist_Listener extends StatelessWidget {
             ]),
       ),
     ));
+  }
+}
+
+ */
+
+class Artist_Listener extends StatefulWidget {
+  @override
+  _ArtistSelectedState createState() => _ArtistSelectedState();
+}
+
+class _ArtistSelectedState extends State<Artist_Listener> {
+  List<bool> isSelected;
+
+  @override
+  void initState() {
+    isSelected = List.generate(3, (index) => true);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            ToggleButtons(
+              borderColor: Colors.black,
+              borderWidth: 1,
+              selectedBorderColor: Colors.redAccent,
+              selectedColor: Colors.white,
+              borderRadius: BorderRadius.circular(100),
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    'Artist',
+                    style: TextStyle(fontSize: 30),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    'Listener',
+                    style: TextStyle(fontSize: 30),
+                  ),
+                ),
+
+              ],
+              onPressed: (int index) {
+                setState(() {
+                  for (int i = 0; i < isSelected.length; i++) {
+                    isSelected[i] = i == index;
+                  }
+                });
+              },
+              isSelected: isSelected,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

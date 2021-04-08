@@ -35,6 +35,7 @@ class GeneratedGroup12Widget extends StatelessWidget {
               child: GeneratedRapWidget(),
             )
           ]),
+
     );
   }
 }

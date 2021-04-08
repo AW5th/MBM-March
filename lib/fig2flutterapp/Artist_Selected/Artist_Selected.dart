@@ -8,6 +8,7 @@ import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/Generat
 import 'package:flutter_app_two/helpers/svg/svg.dart';
 import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/Listener_Button.dart';
 /* Artist Selected  */
+
 class Artist_Selected extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -192,3 +193,6 @@ class Artist_Selected extends StatelessWidget {
     ));
   }
 }
+
+
+
