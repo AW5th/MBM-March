@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget/generated/GeneratedBasicheart_outlineWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget/generated/GeneratedGroup1482Widget.dart';
+import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedBasicheart_outlineWidget.dart';
+import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedGroup1482Widget.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 
 /* Group Group 1485

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget/generated/GeneratedHomeIndicatorWidget3.dart';
+import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedHomeIndicatorWidget3.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 
 /* Instance Home Indicator

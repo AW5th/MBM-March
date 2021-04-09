@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget/generated/GeneratedIconWidget.dart';
+import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedIconWidget.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 
 /* Frame Icon / Light / chevron.left

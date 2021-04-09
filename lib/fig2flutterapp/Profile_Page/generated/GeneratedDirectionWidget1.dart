@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget/generated/GeneratedVector436Widget1.dart';
+import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedVector436Widget1.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 
 /* Frame direction

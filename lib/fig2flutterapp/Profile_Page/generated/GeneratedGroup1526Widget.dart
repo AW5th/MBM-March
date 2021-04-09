@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget/generated/GeneratedIcon1024x1024FullWidget9.dart';
-import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget/generated/GeneratedEllipse3Widget1.dart';
+import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedIcon1024x1024FullWidget9.dart';
+import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedEllipse3Widget1.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 
 /* Group Group 1526

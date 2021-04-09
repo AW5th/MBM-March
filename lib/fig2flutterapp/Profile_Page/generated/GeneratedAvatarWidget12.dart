@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget/generated/GeneratedAvatarWidget13.dart';
-import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget/generated/GeneratedAvatarMaskWidget19.dart';
-import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget/generated/GeneratedAvatarMaskWidget18.dart';
+import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedAvatarWidget13.dart';
+import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedAvatarMaskWidget19.dart';
+import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedAvatarMaskWidget18.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 
 /* Frame Avatar
