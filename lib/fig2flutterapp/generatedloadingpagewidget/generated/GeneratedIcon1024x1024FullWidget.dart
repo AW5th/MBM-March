@@ -8,7 +8,7 @@ class GeneratedIcon1024x1024FullWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () =>
-          Navigator.pushNamed(context, '/GeneratedSignUpSignInpageWidget'),
+          Navigator.pushNamed(context, '/Login_CreateAccount'),
       child: Container(
         width: 250.0,
         height: 168.40277099609375,

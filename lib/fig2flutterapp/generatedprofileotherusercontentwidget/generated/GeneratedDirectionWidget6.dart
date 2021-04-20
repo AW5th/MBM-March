@@ -15,7 +15,7 @@ class GeneratedDirectionWidget6 extends StatelessWidget {
         d: 1.00,
         child: GestureDetector(
           onTap: () =>
-              Navigator.pushNamed(context, '/GeneratedMessagingZachWidget'),
+              Navigator.pushNamed(context, '/Messenger_Chat_Opened'),
           child: Container(
             width: 26.20689582824707,
             height: 24.27597999572754,

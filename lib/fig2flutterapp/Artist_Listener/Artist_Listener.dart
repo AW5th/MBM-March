@@ -114,7 +114,7 @@ class _ArtistSelectedState extends State<Artist_Listener> {
 
   @override
   void initState() {
-    isSelected = List.generate(3, (index) => true);
+    isSelected = List.generate(2, (index) => true);
     super.initState();
   }
 
@@ -128,7 +128,8 @@ class _ArtistSelectedState extends State<Artist_Listener> {
             ToggleButtons(
               borderColor: Colors.black,
               borderWidth: 1,
-              selectedBorderColor: Colors.redAccent,
+              fillColor: Colors.orange,
+              selectedBorderColor: Colors.orange,
               selectedColor: Colors.white,
               borderRadius: BorderRadius.circular(100),
               children: <Widget>[
@@ -151,7 +152,8 @@ class _ArtistSelectedState extends State<Artist_Listener> {
               onPressed: (int index) {
                 setState(() {
                   for (int i = 0; i < isSelected.length; i++) {
-                    isSelected[i] = i == index;
+                    isSelected[i] = ( i == index);
+
                   }
                 });
               },

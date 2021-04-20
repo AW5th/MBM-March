@@ -10,7 +10,7 @@ class GeneratedGenreSelect1Widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () =>
-          Navigator.pushNamed(context, '/GeneratedSignUpSignInpageWidget5'),
+          Navigator.pushNamed(context, '/Genre_Selection'),
       child: Container(
         width: 298.0,
         height: 103.0,

@@ -11,7 +11,7 @@ class GeneratedGroup1498Widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () =>
-          Navigator.pushNamed(context, '/GeneratedDashboardZachWidget2'),
+          Navigator.pushNamed(context, '/View_Song'),
       child: Container(
         width: 69.0,
         height: 64.0,
