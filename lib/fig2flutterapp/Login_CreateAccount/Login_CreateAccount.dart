@@ -25,6 +25,32 @@ class Login_CreateAccount extends StatelessWidget {
                   color: Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
+              //Added Test button
+              Positioned(
+                left: 287.0,
+                top: 56.0,
+                right: null,
+                bottom: null,
+                width: 86.0,
+                height: 30.0,
+                child: GestureDetector(
+                  //TODO - Change the route to pick what page you wanna go
+                  onTap: () => Navigator.pushNamed(context, '/Testing_Page'),
+                  child: Text(
+                    '''Test''',
+                    overflow: TextOverflow.visible,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      height: 1.2222222222222223,
+                      fontSize: 18.0,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w400,
+
+                      /* letterSpacing: -0.40799999237060547, */
+                    ),
+                  ),
+                ),
+              ),
               Positioned(
                 left: 0.0,
                 top: 0.0,

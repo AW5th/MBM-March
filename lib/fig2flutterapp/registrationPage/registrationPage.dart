@@ -100,6 +100,7 @@ class MyApp extends State<registrationPage> {
     }
   }
 
+  //below is used as refecrence to get error messages to popup when register fails
   /*w
   Future<String> _registerUser(LoginData data) async {
     try {
