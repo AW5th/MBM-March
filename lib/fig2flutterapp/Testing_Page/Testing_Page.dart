@@ -1,30 +1,9 @@
-import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
-import 'package:amplify_core/amplify_core.dart';
-import 'amplifyconfiguration.dart';
-import 'dart:developer';
-import 'package:flutter_login/flutter_login.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
-
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedGroup4Widget2.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedNextWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedEmailAddressWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedFrame1452Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedLine26Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedPasswordWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedUserNameWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedGroup7Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedLine27Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedSignUpWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedConfirmPasswordWidget.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedLine25Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedLine24Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedEmailAddressWidget1.dart';
 import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedIcon1024x1024FullWidget2.dart';
-//import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedGroup7Widget.dart'
-/* Registration   Page  */
+
+/* Testing Page  */
 
 void main() {
   runApp(MaterialApp(
@@ -58,7 +37,7 @@ class MyApp extends State<Testing_Page> {
                   color: Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
-              //Added Skip button
+              //Go back button
               Positioned(
                 left: 287.0,
                 top: 56.0,
