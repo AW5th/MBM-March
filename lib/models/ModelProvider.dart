@@ -16,50 +16,24 @@
 // ignore_for_file: public_member_api_docs
 
 import 'package:amplify_datastore_plugin_interface/amplify_datastore_plugin_interface.dart';
-import 'Blog.dart';
-import 'Comment.dart';
-import 'Obj.dart';
-import 'Post.dart';
+import 'GenreObject.dart';
 
-export 'Blog.dart';
-export 'Comment.dart';
-export 'Obj.dart';
-export 'Post.dart';
+export 'GenreObject.dart';
 
 class ModelProvider implements ModelProviderInterface {
   @override
-  String version = "f2791704961693ae20f9e194fe04b898";
+  String version = "3ceb114834540d6ac7662b30595f2ed3";
   @override
-  List<ModelSchema> modelSchemas = [
-    Blog.schema,
-    Comment.schema,
-    Obj.schema,
-    Post.schema
-  ];
+  List<ModelSchema> modelSchemas = [GenreObject.schema];
   static final ModelProvider _instance = ModelProvider();
 
   static ModelProvider get instance => _instance;
 
   ModelType getModelTypeByModelName(String modelName) {
     switch (modelName) {
-      case "Blog":
+      case "GenreObject":
         {
-          return Blog.classType;
-        }
-        break;
-      case "Comment":
-        {
-          return Comment.classType;
-        }
-        break;
-      case "Obj":
-        {
-          return Obj.classType;
-        }
-        break;
-      case "Post":
-        {
-          return Post.classType;
+          return GenreObject.classType;
         }
         break;
       default:

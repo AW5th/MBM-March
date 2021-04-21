@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedFrame1452Widget.dart';
+import 'package:flutter_app_two/models/ModelProvider.dart';
+import 'package:flutter_app_two/models/GenreObject.dart';
+import 'package:amplify_core/amplify_core.dart';
+import 'package:amplify_datastore/amplify_datastore.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedIcon1024x1024FullWidget2.dart';
 
@@ -17,13 +20,10 @@ class Testing_Page extends StatefulWidget {
 }
 
 class MyApp extends State<Testing_Page> {
-
   @override
   Widget build(BuildContext context) {
     return Material(
-        child: ClipRRect(
-      borderRadius: BorderRadius.zero,
-      child: Container(
+        child: Container(
         width: 375.0,
         height: 812.0,
         child: Stack(
@@ -31,12 +31,6 @@ class MyApp extends State<Testing_Page> {
             alignment: Alignment.center,
             overflow: Overflow.visible,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.zero,
-                child: Container(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                ),
-              ),
               //Go back button
               Positioned(
                 left: 287.0,
@@ -47,7 +41,8 @@ class MyApp extends State<Testing_Page> {
                 height: 30.0,
                 child: GestureDetector(
                   //TODO - Change the route to pick what page you wanna go
-                  onTap: () => Navigator.pushNamed(context, '/Login_CreateAccount'),
+                  onTap: () =>
+                      Navigator.pushNamed(context, '/Login_CreateAccount'),
                   child: Text(
                     '''Back''',
                     overflow: TextOverflow.visible,
@@ -61,6 +56,22 @@ class MyApp extends State<Testing_Page> {
                       /* letterSpacing: -0.40799999237060547, */
                     ),
                   ),
+                ),
+              ),
+              //button test
+              Positioned(
+                left: null,
+                top: 356.0,
+                right: null,
+                bottom: null,
+                width: 300.0,
+                height: 50.0,
+                child: ElevatedButton.icon(
+                  label: Text('Send Data'),
+                  icon: Icon(Icons.file_upload),
+                  onPressed: () {
+                    print('Pressed');
+                  },
                 ),
               ),
               Positioned(
@@ -88,18 +99,9 @@ class MyApp extends State<Testing_Page> {
                         ))
                   ]);
                 }),
-              ),
-              Positioned(
-                left: 277.0,
-                top: 362.0,
-                right: null,
-                bottom: null,
-                width: 64.0,
-                height: 2.0,
-                child: GeneratedFrame1452Widget(),
               )
             ]),
       ),
-    ));
+    );
   }
 }

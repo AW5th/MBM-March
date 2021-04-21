@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedNextWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedFrame1452Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedLine26Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedPasswordWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedUserNameWidget.dart';
@@ -487,15 +486,6 @@ class MyApp extends State<registrationPage> {
                         ))
                   ]);
                 }),
-              ),
-              Positioned(
-                left: 277.0,
-                top: 362.0,
-                right: null,
-                bottom: null,
-                width: 64.0,
-                height: 2.0,
-                child: GeneratedFrame1452Widget(),
               )
             ]),
       ),

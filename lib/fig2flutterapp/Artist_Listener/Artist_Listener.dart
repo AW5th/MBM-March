@@ -12,7 +12,9 @@ class Artist_Listener extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-        child: ClipRRect(
+        child:
+
+
       borderRadius: BorderRadius.zero,
       child: Container(
         width: 375.0,

@@ -7,7 +7,6 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedFrame1452Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedLine26Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedPasswordWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedNextWidget.dart';

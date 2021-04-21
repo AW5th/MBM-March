@@ -14,7 +14,6 @@ import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/Artist_Listener.d
 import 'package:flutter_app_two/fig2flutterapp/Artist_Selected/Artist_Selected.dart';
 import 'package:flutter_app_two/fig2flutterapp/Listener_Selected/Listener_Selected.dart';
 import 'package:flutter_app_two/fig2flutterapp/Artist_Type/Artist_Type.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/registrationPage.dart';
 import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/Feed_Dashboard.dart';
 import 'package:flutter_app_two/fig2flutterapp/Profile_Page/Profile_Page.dart';
 import 'package:flutter_app_two/fig2flutterapp/View_Song_Share/View_Song_Share.dart';
