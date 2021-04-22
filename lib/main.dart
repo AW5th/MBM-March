@@ -1,6 +1,7 @@
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_core/amplify_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_two/fig2flutterapp/Testing_Page2/Testing_Page2.dart';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
@@ -32,6 +33,7 @@ import 'package:flutter_app_two/fig2flutterapp/generateddashboardzachwidget4/Gen
 import 'fig2flutterapp/generateddashboardzachwidget5/GeneratedDashboardZachWidget5.dart';
 import 'fig2flutterapp/Genre_Selection/Genre_Selection.dart';
 import 'fig2flutterapp/Testing_Page/Testing_Page.dart';
+import 'fig2flutterapp/Testing_Page2/Testing_Page2.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 
@@ -57,6 +59,7 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/GeneratedLoadingPageWidget',
       routes: {
         '/Testing_Page': (context) => Testing_Page(),
+        '/Testing_Page2': (context) => Testing_Page2(),
         '/GeneratedLoadingPageWidget': (context) =>
             GeneratedLoadingPageWidget(),
         '/Login_CreateAccount': (context) => Login_CreateAccount(),

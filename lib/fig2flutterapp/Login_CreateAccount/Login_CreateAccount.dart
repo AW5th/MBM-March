@@ -37,7 +37,33 @@ class Login_CreateAccount extends StatelessWidget {
                   //TODO - Change the route to pick what page you wanna go
                   onTap: () => Navigator.pushNamed(context, '/Testing_Page'),
                   child: Text(
-                    '''Test''',
+                    '''backend''',
+                    overflow: TextOverflow.visible,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      height: 1.2222222222222223,
+                      fontSize: 18.0,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w400,
+
+                      /* letterSpacing: -0.40799999237060547, */
+                    ),
+                  ),
+                ),
+              ),
+              //Added Test2 button
+              Positioned(
+                left: 57.0,
+                top: 56.0,
+                right: null,
+                bottom: null,
+                width: 86.0,
+                height: 30.0,
+                child: GestureDetector(
+                  //TODO - Change the route to pick what page you wanna go
+                  onTap: () => Navigator.pushNamed(context, '/Testing_Page2'),
+                  child: Text(
+                    '''front end''',
                     overflow: TextOverflow.visible,
                     textAlign: TextAlign.center,
                     style: TextStyle(
