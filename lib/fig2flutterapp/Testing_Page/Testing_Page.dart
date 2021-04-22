@@ -6,7 +6,7 @@ import 'package:amplify_datastore/amplify_datastore.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedIcon1024x1024FullWidget2.dart';
 
-/* Testing Page    */
+/* Testing Page     */
 
 void main() {
   runApp(MaterialApp(
