@@ -59,22 +59,7 @@ class MyApp extends State<Testing_Page2> {
                 ),
               ),
               //button test
-              Positioned(
-                left: null,
-                top: 356.0,
-                right: null,
-                bottom: null,
-                width: 300.0,
-                height: 50.0,
-                child: ElevatedButton.icon(
-                  label: Text('Send Data'),
-                  icon: Icon(Icons.file_upload),
-                  onPressed: () {
-                    print('Pressed');
-                  },
-                ),
-              ),
-              Positioned(
+           Positioned(
                 //ok
                 left: 0.0,
                 top: 0.0,
