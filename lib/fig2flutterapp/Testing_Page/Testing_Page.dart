@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_two/models/ModelProvider.dart';
 import 'package:flutter_app_two/models/GenreObject.dart';
 import 'package:amplify_core/amplify_core.dart';
+import 'amplifyconfiguration.dart';
 import 'package:amplify_datastore/amplify_datastore.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedIcon1024x1024FullWidget2.dart';
@@ -20,6 +21,21 @@ class Testing_Page extends StatefulWidget {
 }
 
 class MyApp extends State<Testing_Page> {
+  //initiate amplify
+  final _amplify = Amplify();
+  final _genreID = "genre";
+  void _configureAmplify() {
+    //instance of model provider
+    final provider = ModelProvider();
+    final dataStorePlugin = AmplifyDataStore(modelProvider: provider);
+
+    _amplify.addPlugin(dataStorePlugins: [(dataStorePlugin)]);
+    _amplify.configure(amplifyconfig);
+
+    print('Amplify configured');
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -67,7 +83,7 @@ class MyApp extends State<Testing_Page> {
                 width: 300.0,
                 height: 50.0,
                 child: ElevatedButton.icon(
-                  label: Text('Send Data'),
+                  label: Text('EDM'),
                   icon: Icon(Icons.file_upload),
                   onPressed: () {
                     print('Pressed');
@@ -103,5 +119,42 @@ class MyApp extends State<Testing_Page> {
             ]),
       ),
     );
+  }
+
+    void create() async {
+    final genreObject = GenreObject(
+      id: _genreID, value: "EDM");
+
+    try {
+      await Amplify.DataStore.save(genreObject);
+
+      print('Save ${genreObject.toString()}');
+    }
+    catch(e){
+      print(e);
+    }
+  }
+
+  void readAll() async {
+    try {
+      final genreObjects = await Amplify.DataStore.query(GenreObject.classType);
+
+      print(genreObjects.toString());
+    }
+    catch (e) {
+      print(e);
+    }
+  }
+
+  void readByID() async {
+
+  }
+
+  void update() async {
+
+  }
+
+  void delete() async {
+
   }
 }
