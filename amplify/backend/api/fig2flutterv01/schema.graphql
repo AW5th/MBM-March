@@ -1,5 +1,0 @@
-type GenreObject @model @auth(rules: [{allow: private}]) {
-  id: ID!
-  value: String
-}
- 

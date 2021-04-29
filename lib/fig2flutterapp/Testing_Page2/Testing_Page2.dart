@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_two/models/ModelProvider.dart';
-import 'package:flutter_app_two/models/GenreObject.dart';
+
 import 'package:amplify_core/amplify_core.dart';
 import 'package:amplify_datastore/amplify_datastore.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 import 'package:flutter_app_two/fig2flutterapp/Testing_Page2/generated/GeneratedIcon1024x1024FullWidget2.dart';
-
+import 'package:flutter_app_two/amplifyconfiguration.dart';
 /* Testing Page      */
 
 void main() {

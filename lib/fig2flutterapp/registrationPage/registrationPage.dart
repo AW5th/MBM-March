@@ -1,6 +1,6 @@
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_core/amplify_core.dart';
-import 'amplifyconfiguration.dart';
+import 'package:flutter_app_two/amplifyconfiguration.dart';
 import 'dart:developer';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
@@ -10,11 +10,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedNextWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedLine26Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedPasswordWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedUserNameWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedGroup7Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedLine27Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedSignUpWidget.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedConfirmPasswordWidget.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
@@ -157,7 +152,7 @@ class MyApp extends State<registrationPage> {
     try {
       Map<String, dynamic> userAttributes = {
         "email": emailController.text.trim(),
-        "preferred_username": emailController.text.trim(),
+        "preferred_username": usernameController.text.trim(),
         // additional attributes as needed
       };
       SignUpResult res = await Amplify.Auth.signUp(
@@ -380,7 +375,6 @@ class MyApp extends State<registrationPage> {
                     ),
                     //fillColor: Colors.green
                   ),
-                  validator: validatePassword,
                   controller: usernameController,
                   keyboardType: TextInputType.name,
                   style: new TextStyle(
@@ -461,6 +455,7 @@ class MyApp extends State<registrationPage> {
                   ),
                 ),
               ),
+              //LOGO
               Positioned(
                 //ok
                 left: 0.0,

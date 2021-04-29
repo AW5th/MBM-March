@@ -1,10 +1,10 @@
 {
-  "AppSyncApiName": "fig2flutterv01",
+  "AppSyncApiName": "MBM",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
   "AuthCognitoUserPoolId": {
     "Fn::GetAtt": [
-      "authfig2flutterv017ecb0d32",
+      "authMBM",
       "Outputs.UserPoolId"
     ]
   }

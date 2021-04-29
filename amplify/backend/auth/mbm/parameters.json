@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "fig2flutterv017ecb0d32_identitypool_7ecb0d32",
+    "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "fig2fl7ecb0d32",
-    "userPoolName": "fig2flutterv017ecb0d32_userpool_7ecb0d32",
+    "resourceNameTruncated": "mbm20333f85",
+    "userPoolName": "MBM",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -11,23 +11,27 @@
         "SMS Text Message"
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
-    "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Music by Masses - Your verification code",
-    "emailVerificationMessage": "Thank you for signing up for Music by Masses, here is your verification code:\n \n{####}\n\nEnter this code into the prompt to confirm your Account.\n\n\nBest,\nMusic by Masses Team",
+    "smsVerificationMessage": "Forgot password code: {####}",
+    "emailVerificationSubject": "Music by Masses - Subject {####}",
+    "emailVerificationMessage": "Body {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
-    "passwordPolicyCharacters": [],
-    "requiredAttributes": [
-        "email"
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Numbers"
     ],
-    "userpoolClientGenerateSecret": true,
+    "requiredAttributes": [
+        "email",
+        "preferred_username"
+    ],
+    "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "fig2fl7ecb0d32_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "MBM20333f85_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "7ecb0d32",
-    "resourceName": "fig2flutterv017ecb0d32",
+    "sharedId": "20333f85",
+    "resourceName": "MBM",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -41,17 +45,17 @@
             "Arn"
         ]
     },
-    "useDefault": "manual",
+    "serviceName": "Cognito",
     "usernameAttributes": [
         "email"
     ],
-    "userPoolGroupList": [],
-    "serviceName": "Cognito",
-    "usernameCaseSensitive": false,
-    "dependsOn": [],
+    "useDefault": "manual",
     "userPoolGroups": false,
+    "userPoolGroupList": [],
     "adminQueries": false,
     "thirdPartyAuth": false,
     "authProviders": [],
+    "usernameCaseSensitive": false,
+    "dependsOn": [],
     "hostedUI": false
 }

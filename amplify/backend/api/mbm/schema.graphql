@@ -1,0 +1,21 @@
+type Genres @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  GenreList: [String]
+  Genre: String
+}
+
+type Music @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  Titl: String
+  Artist: String
+  Genre: String
+}
+
+type User @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  Username: String
+  Email: AWSEmail
+  Genres: [String]
+  ArtistType: String
+}
+ 

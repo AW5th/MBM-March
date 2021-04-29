@@ -36,6 +36,14 @@ import 'fig2flutterapp/Testing_Page/Testing_Page.dart';
 import 'fig2flutterapp/Testing_Page2/Testing_Page2.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_app_two/models/ModelProvider.dart';
+import 'package:flutter_app_two/models/Genres.dart';
+import 'package:amplify_core/amplify_core.dart';
+import 'amplifyconfiguration.dart';
+import 'package:amplify_datastore/amplify_datastore.dart';
+import 'package:flutter_app_two/helpers/transform/transform.dart';
+import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedIcon1024x1024FullWidget2.dart';
 
 void main() {
   runApp(MaterialApp(

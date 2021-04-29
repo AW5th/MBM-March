@@ -16,14 +16,27 @@
 // ignore_for_file: public_member_api_docs
 
 import 'package:amplify_datastore_plugin_interface/amplify_datastore_plugin_interface.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 
 /** This is an auto generated class representing the Genres type in your schema. */
 @immutable
 class Genres extends Model {
-  static const classType = const GenresType();
+  static const classType = const _GenresModelType();
   final String id;
-  final String value;
+  List<String> GenreList;
+  final String Genre;
+
+
+  void addGenre(String genreString){
+    try {
+      GenreList.add(genreString);
+    }
+    catch(e){
+      print(e);
+    }
+  }
+
 
   @override
   getInstanceType() => classType;
@@ -33,11 +46,13 @@ class Genres extends Model {
     return id;
   }
 
-  const Genres._internal({@required this.id, this.value});
+   Genres._internal({@required this.id, this.GenreList, this.Genre});
 
-  factory Genres({String id, String value}) {
+  factory Genres({String id, List<String> GenreList, String Genre}) {
     return Genres._internal(
-        id: id == null ? UUID.getUUID() : id, value: value);
+        id: id == null ? UUID.getUUID() : id,
+        GenreList: GenreList = new List<String>(),
+        Genre: Genre);
   }
 
   bool equals(Object other) {
@@ -47,7 +62,10 @@ class Genres extends Model {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is Genres && id == other.id && value == other.value;
+    return other is Genres &&
+        id == other.id &&
+        DeepCollectionEquality().equals(GenreList, other.GenreList) &&
+        Genre == other.Genre;
   }
 
   @override
@@ -59,28 +77,37 @@ class Genres extends Model {
 
     buffer.write("Genres {");
     buffer.write("id=" + "$id" + ", ");
-    buffer.write("value=" + "$value");
+    buffer.write("GenreList=" +
+        (GenreList != null ? GenreList.toString() : "null") +
+        ", ");
+    buffer.write("Genre=" + "$Genre");
     buffer.write("}");
 
     return buffer.toString();
   }
 
-  Genres copyWith({String id, String value}) {
-    return Genres(id: id ?? this.id, value: value ?? this.value);
+  Genres copyWith({String id, List<String> GenreList, String Genre}) {
+    return Genres(
+        id: id ?? this.id,
+        GenreList: GenreList ?? this.GenreList,
+        Genre: Genre ?? this.Genre);
   }
 
   Genres.fromJson(Map<String, dynamic> json)
       : id = json['id'],
-        value = json['value'];
+        GenreList = json['GenreList']?.cast<String>(),
+        Genre = json['Genre'];
 
-  Map<String, dynamic> toJson() => {'id': id, 'value': value};
+  Map<String, dynamic> toJson() =>
+      {'id': id, 'GenreList': GenreList, 'Genre': Genre};
 
-  static final QueryField ID = QueryField(fieldName: "genreObject.id");
-  static final QueryField VALUE = QueryField(fieldName: "value");
+  static final QueryField ID = QueryField(fieldName: "genres.id");
+  static final QueryField GENRELIST = QueryField(fieldName: "GenreList");
+  static final QueryField GENRE = QueryField(fieldName: "Genre");
   static var schema =
       Model.defineSchema(define: (ModelSchemaDefinition modelSchemaDefinition) {
     modelSchemaDefinition.name = "Genres";
-    modelSchemaDefinition.pluralName = "Genress";
+    modelSchemaDefinition.pluralName = "Genres";
 
     modelSchemaDefinition.authRules = [
       AuthRule(authStrategy: AuthStrategy.PRIVATE, operations: [
@@ -94,14 +121,21 @@ class Genres extends Model {
     modelSchemaDefinition.addField(ModelFieldDefinition.id());
 
     modelSchemaDefinition.addField(ModelFieldDefinition.field(
-        key: Genres.VALUE,
+        key: Genres.GENRELIST,
+        isRequired: false,
+        isArray: true,
+        ofType: ModelFieldType(ModelFieldTypeEnum.collection,
+            ofModelName: describeEnum(ModelFieldTypeEnum.string))));
+
+    modelSchemaDefinition.addField(ModelFieldDefinition.field(
+        key: Genres.GENRE,
         isRequired: false,
         ofType: ModelFieldType(ModelFieldTypeEnum.string)));
   });
 }
 
-class GenresType extends ModelType<Genres> {
-  const GenresType();
+class _GenresModelType extends ModelType<Genres> {
+  const _GenresModelType();
 
   @override
   Genres fromJson(Map<String, dynamic> jsonData) {

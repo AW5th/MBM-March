@@ -1,6 +1,6 @@
 {
   "auth": {
-    "fig2flutterv017ecb0d32": {
+    "MBM": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -8,7 +8,7 @@
     }
   },
   "api": {
-    "fig2flutterv01": {
+    "MBM": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -16,7 +16,7 @@
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
-              "userPoolId": "authfig2flutterv017ecb0d32_userpool_7ecb0d32"
+              "userPoolId": "authMBM"
             }
           },
           "additionalAuthenticationProviders": [
@@ -26,12 +26,6 @@
           ]
         }
       }
-    }
-  },
-  "storage": {
-    "content": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation"
     }
   }
 }

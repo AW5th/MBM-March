@@ -1,19 +1,19 @@
 {
-  "dev": {
+  "staging": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-fig2flutterv01-dev-183207-authRole",
-      "UnauthRoleArn": "arn:aws:iam::306424027845:role/amplify-fig2flutterv01-dev-183207-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::306424027845:role/amplify-fig2flutterv01-dev-183207-authRole",
-      "Region": "us-west-2",
-      "DeploymentBucketName": "amplify-fig2flutterv01-dev-183207-deployment",
-      "UnauthRoleName": "amplify-fig2flutterv01-dev-183207-unauthRole",
-      "StackName": "amplify-fig2flutterv01-dev-183207",
-      "StackId": "arn:aws:cloudformation:us-west-2:306424027845:stack/amplify-fig2flutterv01-dev-183207/f3efad20-7a2d-11eb-89c2-02e80b0e3dd3",
-      "AmplifyAppId": "d2r3siw1xipd3g"
+      "AuthRoleName": "amplify-mbm-staging-50058-authRole",
+      "UnauthRoleArn": "arn:aws:iam::306424027845:role/amplify-mbm-staging-50058-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::306424027845:role/amplify-mbm-staging-50058-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-mbm-staging-50058-deployment",
+      "UnauthRoleName": "amplify-mbm-staging-50058-unauthRole",
+      "StackName": "amplify-mbm-staging-50058",
+      "StackId": "arn:aws:cloudformation:us-east-1:306424027845:stack/amplify-mbm-staging-50058/e48cbfc0-a3f0-11eb-ac31-0edd3867f3f1",
+      "AmplifyAppId": "dn2h3c7zklm9x"
     },
     "categories": {
       "auth": {
-        "fig2flutterv017ecb0d32": {}
+        "MBM": {}
       }
     }
   }

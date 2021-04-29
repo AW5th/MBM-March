@@ -1,6 +1,25 @@
 const amplifyconfig = ''' {
     "UserAgent": "aws-amplify-cli/2.0",
     "Version": "1.0",
+    "api": {
+        "plugins": {
+            "awsAPIPlugin": {
+                "mbm": {
+                    "endpointType": "GraphQL",
+                    "endpoint": "https://rrzowckmgbesvlrq35gi4bo6lu.appsync-api.us-east-1.amazonaws.com/graphql",
+                    "region": "us-east-1",
+                    "authorizationType": "API_KEY",
+                    "apiKey": "da2-5akoebynwbfyzor622mk6v3iiu"
+                },
+                "MBM": {
+                    "endpointType": "GraphQL",
+                    "endpoint": "https://guzb64rxx5gbziucuxssjr2b4m.appsync-api.us-east-1.amazonaws.com/graphql",
+                    "region": "us-east-1",
+                    "authorizationType": "AMAZON_COGNITO_USER_POOLS"
+                }
+            }
+        }
+    },
     "auth": {
         "plugins": {
             "awsCognitoAuthPlugin": {
@@ -12,17 +31,16 @@ const amplifyconfig = ''' {
                 "CredentialsProvider": {
                     "CognitoIdentity": {
                         "Default": {
-                            "PoolId": "us-west-2:7b2c1a19-578d-4735-b650-3b3a801dbaa7",
-                            "Region": "us-west-2"
+                            "PoolId": "us-east-1:297365aa-1270-4095-ad93-eed07c3505ac",
+                            "Region": "us-east-1"
                         }
                     }
                 },
                 "CognitoUserPool": {
                     "Default": {
-                        "PoolId": "us-west-2_8OhRb2GEC",
-                        "AppClientId": "7itp9e24mnmi988qam01v1jdch",
-                        "AppClientSecret": "ee5co43vdsu5v42mqfd8sq304hngugujrfe6um4dh8vbre37jqm",
-                        "Region": "us-west-2"
+                        "PoolId": "us-east-1_VsbjYpbdj",
+                        "AppClientId": "550tf85vsc9krla6h33jissbvo",
+                        "Region": "us-east-1"
                     }
                 },
                 "Auth": {
@@ -32,35 +50,17 @@ const amplifyconfig = ''' {
                 },
                 "AppSync": {
                     "Default": {
-                        "ApiUrl": "https://hd4kstwubfanngwfufdbxout44.appsync-api.us-west-2.amazonaws.com/graphql",
-                        "Region": "us-west-2",
+                        "ApiUrl": "https://guzb64rxx5gbziucuxssjr2b4m.appsync-api.us-east-1.amazonaws.com/graphql",
+                        "Region": "us-east-1",
                         "AuthMode": "AMAZON_COGNITO_USER_POOLS",
-                        "ClientDatabasePrefix": "fig2flutterv01_AMAZON_COGNITO_USER_POOLS"
+                        "ClientDatabasePrefix": "MBM_AMAZON_COGNITO_USER_POOLS"
                     },
-                    "fig2flutterv01_AWS_IAM": {
-                        "ApiUrl": "https://hd4kstwubfanngwfufdbxout44.appsync-api.us-west-2.amazonaws.com/graphql",
-                        "Region": "us-west-2",
+                    "MBM_AWS_IAM": {
+                        "ApiUrl": "https://guzb64rxx5gbziucuxssjr2b4m.appsync-api.us-east-1.amazonaws.com/graphql",
+                        "Region": "us-east-1",
                         "AuthMode": "AWS_IAM",
-                        "ClientDatabasePrefix": "fig2flutterv01_AWS_IAM"
+                        "ClientDatabasePrefix": "MBM_AWS_IAM"
                     }
-                },
-                "S3TransferUtility": {
-                    "Default": {
-                        "Bucket": "mbmcontent183207-dev",
-                        "Region": "us-west-2"
-                    }
-                }
-            }
-        }
-    },
-    "api": {
-        "plugins": {
-            "awsAPIPlugin": {
-                "fig2flutterv01": {
-                    "endpointType": "GraphQL",
-                    "endpoint": "https://hd4kstwubfanngwfufdbxout44.appsync-api.us-west-2.amazonaws.com/graphql",
-                    "region": "us-west-2",
-                    "authorizationType": "AMAZON_COGNITO_USER_POOLS"
                 }
             }
         }
@@ -68,8 +68,8 @@ const amplifyconfig = ''' {
     "storage": {
         "plugins": {
             "awsS3StoragePlugin": {
-                "bucket": "mbmcontent183207-dev",
-                "region": "us-west-2",
+                "bucket": "storage00643-staging",
+                "region": "us-east-1",
                 "defaultAccessLevel": "guest"
             }
         }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_two/models/ModelProvider.dart';
-import 'package:flutter_app_two/models/GenreObject.dart';
+import 'package:flutter_app_two/models/Genres.dart';
 import 'package:amplify_core/amplify_core.dart';
-import 'amplifyconfiguration.dart';
+import 'package:flutter_app_two/amplifyconfiguration.dart';
 import 'package:amplify_datastore/amplify_datastore.dart';
 import 'package:flutter_app_two/helpers/transform/transform.dart';
 import 'package:flutter_app_two/fig2flutterapp/Testing_Page/generated/GeneratedIcon1024x1024FullWidget2.dart';
@@ -24,6 +24,7 @@ class MyApp extends State<Testing_Page> {
   //initiate amplify
   final _amplify = Amplify();
   final _genreID = "genre";
+
   void _configureAmplify() {
     //instance of model provider
     final provider = ModelProvider();
@@ -80,13 +81,14 @@ class MyApp extends State<Testing_Page> {
                 top: 356.0,
                 right: null,
                 bottom: null,
-                width: 300.0,
-                height: 50.0,
+                width: 200.0,
+                height: 75.0,
                 child: ElevatedButton.icon(
                   label: Text('EDM'),
                   icon: Icon(Icons.file_upload),
                   onPressed: () {
-                    print('Pressed');
+                    create("edm");
+                    print('Pressed - EDM should have appeared in back end!!!!');
                   },
                 ),
               ),
@@ -121,14 +123,16 @@ class MyApp extends State<Testing_Page> {
     );
   }
 
-    void create() async {
-    final genreObject = GenreObject(
-      id: _genreID, value: "EDM");
+
+    void create(String genreString) async {
+    Genres genreObject = Genres(id: _genreID, Genre: genreString);
+      //adds genre
+      genreObject.addGenre(genreString);
 
     try {
       await Amplify.DataStore.save(genreObject);
 
-      print('Save ${genreObject.toString()}');
+      print('Saved ${genreObject.toString()}');
     }
     catch(e){
       print(e);
@@ -137,7 +141,7 @@ class MyApp extends State<Testing_Page> {
 
   void readAll() async {
     try {
-      final genreObjects = await Amplify.DataStore.query(GenreObject.classType);
+      final genreObjects = await Amplify.DataStore.query(Genres.classType);
 
       print(genreObjects.toString());
     }
@@ -146,12 +150,36 @@ class MyApp extends State<Testing_Page> {
     }
   }
 
-  void readByID() async {
+  Future<Genres> readByID() async {
+    try {
+      final genreObjects = await Amplify.DataStore.query(Genres.classType, where: Genres.ID.eq(_genreID));
 
+      if(genreObjects.isEmpty) {
+        print("No objects with ID: $_genreID");
+        return null;
+      }
+
+      final genreObject = genreObjects.first;
+      print(genreObject.toString());
+      return genreObject;
+    }
+    catch(e){
+      print(e);
+      throw e;
+    }
   }
-
+  //Same as create, but must have same ID
   void update() async {
+    try{
+      final genreObject = await readByID();
 
+      final updatedObject = genreObject.copyWith(Genre: genreObject.Genre + ' [UPDATED]n');
+      await Amplify.DataStore.save(updatedObject);
+      print('Updated object to ${updatedObject.toString()}');
+    }
+    catch (e) {
+      print(e);
+    }
   }
 
   void delete() async {
