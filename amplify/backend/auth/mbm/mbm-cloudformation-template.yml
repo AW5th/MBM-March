@@ -149,7 +149,6 @@ Parameters:
   dependsOn:
     Type: CommaDelimitedList
       
-            
   
   hostedUI:
     Type: String

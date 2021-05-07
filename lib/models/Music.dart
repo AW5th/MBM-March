@@ -23,7 +23,7 @@ import 'package:flutter/foundation.dart';
 class Music extends Model {
   static const classType = const _MusicModelType();
   final String id;
-  final String Titl;
+  final String Title;
   final String Artist;
   final String Genre;
 
@@ -36,12 +36,12 @@ class Music extends Model {
   }
 
   const Music._internal(
-      {@required this.id, this.Titl, this.Artist, this.Genre});
+      {@required this.id, this.Title, this.Artist, this.Genre});
 
-  factory Music({String id, String Titl, String Artist, String Genre}) {
+  factory Music({String id, String Title, String Artist, String Genre}) {
     return Music._internal(
         id: id == null ? UUID.getUUID() : id,
-        Titl: Titl,
+        Title: Title,
         Artist: Artist,
         Genre: Genre);
   }
@@ -55,7 +55,7 @@ class Music extends Model {
     if (identical(other, this)) return true;
     return other is Music &&
         id == other.id &&
-        Titl == other.Titl &&
+        Title == other.Title &&
         Artist == other.Artist &&
         Genre == other.Genre;
   }
@@ -69,7 +69,7 @@ class Music extends Model {
 
     buffer.write("Music {");
     buffer.write("id=" + "$id" + ", ");
-    buffer.write("Titl=" + "$Titl" + ", ");
+    buffer.write("Title=" + "$Title" + ", ");
     buffer.write("Artist=" + "$Artist" + ", ");
     buffer.write("Genre=" + "$Genre");
     buffer.write("}");
@@ -77,25 +77,25 @@ class Music extends Model {
     return buffer.toString();
   }
 
-  Music copyWith({String id, String Titl, String Artist, String Genre}) {
+  Music copyWith({String id, String Title, String Artist, String Genre}) {
     return Music(
         id: id ?? this.id,
-        Titl: Titl ?? this.Titl,
+        Title: Title ?? this.Title,
         Artist: Artist ?? this.Artist,
         Genre: Genre ?? this.Genre);
   }
 
   Music.fromJson(Map<String, dynamic> json)
       : id = json['id'],
-        Titl = json['Titl'],
+        Title = json['Title'],
         Artist = json['Artist'],
         Genre = json['Genre'];
 
   Map<String, dynamic> toJson() =>
-      {'id': id, 'Titl': Titl, 'Artist': Artist, 'Genre': Genre};
+      {'id': id, 'Title': Title, 'Artist': Artist, 'Genre': Genre};
 
   static final QueryField ID = QueryField(fieldName: "music.id");
-  static final QueryField TITL = QueryField(fieldName: "Titl");
+  static final QueryField TITLE = QueryField(fieldName: "Title");
   static final QueryField ARTIST = QueryField(fieldName: "Artist");
   static final QueryField GENRE = QueryField(fieldName: "Genre");
   static var schema =
@@ -115,7 +115,7 @@ class Music extends Model {
     modelSchemaDefinition.addField(ModelFieldDefinition.id());
 
     modelSchemaDefinition.addField(ModelFieldDefinition.field(
-        key: Music.TITL,
+        key: Music.TITLE,
         isRequired: false,
         ofType: ModelFieldType(ModelFieldTypeEnum.string)));
 

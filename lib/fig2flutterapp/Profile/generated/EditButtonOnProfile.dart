@@ -7,12 +7,7 @@ import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedEdited
 class EditButtonOnProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => Navigator.pushNamed(
-          context, '/GeneratedProfileEditandSettingsWidget'),
-      child: ClipRRect(
-        borderRadius: BorderRadius.zero,
-        child: Container(
+    return Container(
           width: 24.0,
           height: 24.0,
           child: Stack(
@@ -36,8 +31,6 @@ class EditButtonOnProfile extends StatelessWidget {
                   child: GeneratedEditeditWidget1(),
                 )
               ]),
-        ),
-      ),
-    );
+        );
   }
 }

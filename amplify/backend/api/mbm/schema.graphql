@@ -1,12 +1,6 @@
-type Genres @model @auth(rules: [{allow: private}]) {
-  id: ID!
-  GenreList: [String]
-  Genre: String
-}
-
 type Music @model @auth(rules: [{allow: private}]) {
   id: ID!
-  Titl: String
+  Title: String
   Artist: String
   Genre: String
 }
@@ -17,5 +11,6 @@ type User @model @auth(rules: [{allow: private}]) {
   Email: AWSEmail
   Genres: [String]
   ArtistType: String
+  Style: String
 }
  

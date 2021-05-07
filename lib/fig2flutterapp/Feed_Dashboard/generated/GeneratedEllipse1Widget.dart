@@ -10,20 +10,6 @@ class GeneratedEllipse1Widget extends StatelessWidget {
     return Container(
       width: 50.0,
       height: 50.0,
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Color.fromARGB(63, 0, 0, 0),
-            offset: Offset(0.0, 2.0),
-            blurRadius: 4.0,
-          ),
-          BoxShadow(
-            color: Color.fromARGB(63, 0, 0, 0),
-            offset: Offset(0.0, -2.0),
-            blurRadius: 4.0,
-          )
-        ],
-      ),
       child: SvgWidget(painters: [
         SvgPathPainter.fill()
           ..addPath(

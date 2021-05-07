@@ -38,7 +38,6 @@ import 'package:file_picker/file_picker.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_two/models/ModelProvider.dart';
-import 'package:flutter_app_two/models/Genres.dart';
 import 'package:amplify_core/amplify_core.dart';
 import 'amplifyconfiguration.dart';
 import 'package:amplify_datastore/amplify_datastore.dart';

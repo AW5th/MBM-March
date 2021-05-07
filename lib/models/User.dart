@@ -28,6 +28,7 @@ class User extends Model {
   final String Email;
   final List<String> Genres;
   final String ArtistType;
+  final String Style;
 
   @override
   getInstanceType() => classType;
@@ -42,20 +43,23 @@ class User extends Model {
       this.Username,
       this.Email,
       this.Genres,
-      this.ArtistType});
+      this.ArtistType,
+      this.Style});
 
   factory User(
       {String id,
       String Username,
       String Email,
       List<String> Genres,
-      String ArtistType}) {
+      String ArtistType,
+      String Style}) {
     return User._internal(
         id: id == null ? UUID.getUUID() : id,
         Username: Username,
         Email: Email,
         Genres: Genres != null ? List.unmodifiable(Genres) : Genres,
-        ArtistType: ArtistType);
+        ArtistType: ArtistType,
+        Style: Style);
   }
 
   bool equals(Object other) {
@@ -70,7 +74,8 @@ class User extends Model {
         Username == other.Username &&
         Email == other.Email &&
         DeepCollectionEquality().equals(Genres, other.Genres) &&
-        ArtistType == other.ArtistType;
+        ArtistType == other.ArtistType &&
+        Style == other.Style;
   }
 
   @override
@@ -86,7 +91,8 @@ class User extends Model {
     buffer.write("Email=" + "$Email" + ", ");
     buffer.write(
         "Genres=" + (Genres != null ? Genres.toString() : "null") + ", ");
-    buffer.write("ArtistType=" + "$ArtistType");
+    buffer.write("ArtistType=" + "$ArtistType" + ", ");
+    buffer.write("Style=" + "$Style");
     buffer.write("}");
 
     return buffer.toString();
@@ -97,13 +103,15 @@ class User extends Model {
       String Username,
       String Email,
       List<String> Genres,
-      String ArtistType}) {
+      String ArtistType,
+      String Style}) {
     return User(
         id: id ?? this.id,
         Username: Username ?? this.Username,
         Email: Email ?? this.Email,
         Genres: Genres ?? this.Genres,
-        ArtistType: ArtistType ?? this.ArtistType);
+        ArtistType: ArtistType ?? this.ArtistType,
+        Style: Style ?? this.Style);
   }
 
   User.fromJson(Map<String, dynamic> json)
@@ -111,14 +119,16 @@ class User extends Model {
         Username = json['Username'],
         Email = json['Email'],
         Genres = json['Genres']?.cast<String>(),
-        ArtistType = json['ArtistType'];
+        ArtistType = json['ArtistType'],
+        Style = json['Style'];
 
   Map<String, dynamic> toJson() => {
         'id': id,
         'Username': Username,
         'Email': Email,
         'Genres': Genres,
-        'ArtistType': ArtistType
+        'ArtistType': ArtistType,
+        'Style': Style
       };
 
   static final QueryField ID = QueryField(fieldName: "user.id");
@@ -126,6 +136,7 @@ class User extends Model {
   static final QueryField EMAIL = QueryField(fieldName: "Email");
   static final QueryField GENRES = QueryField(fieldName: "Genres");
   static final QueryField ARTISTTYPE = QueryField(fieldName: "ArtistType");
+  static final QueryField STYLE = QueryField(fieldName: "Style");
   static var schema =
       Model.defineSchema(define: (ModelSchemaDefinition modelSchemaDefinition) {
     modelSchemaDefinition.name = "User";
@@ -161,6 +172,11 @@ class User extends Model {
 
     modelSchemaDefinition.addField(ModelFieldDefinition.field(
         key: User.ARTISTTYPE,
+        isRequired: false,
+        ofType: ModelFieldType(ModelFieldTypeEnum.string)));
+
+    modelSchemaDefinition.addField(ModelFieldDefinition.field(
+        key: User.STYLE,
         isRequired: false,
         ofType: ModelFieldType(ModelFieldTypeEnum.string)));
   });

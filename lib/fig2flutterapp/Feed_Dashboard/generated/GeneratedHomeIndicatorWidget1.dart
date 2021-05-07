@@ -15,7 +15,7 @@ class GeneratedHomeIndicatorWidget1 extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(100.0),
         child: Container(
-          color: Color.fromARGB(255, 0, 0, 0),
+          color: Color.fromARGB(255, 220, 5, 5),
         ),
       ),
     );

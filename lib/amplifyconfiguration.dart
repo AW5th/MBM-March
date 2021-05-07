@@ -61,6 +61,23 @@ const amplifyconfig = ''' {
                         "AuthMode": "AWS_IAM",
                         "ClientDatabasePrefix": "MBM_AWS_IAM"
                     }
+                },
+                "S3TransferUtility": {
+                    "Default": {
+                        "Bucket": "mbmstorage50058-staging",
+                        "Region": "us-east-1"
+                    }
+                },
+                "PinpointAnalytics": {
+                    "Default": {
+                        "AppId": "fd3d3e0ee0bb4818ac7367daa80fac46",
+                        "Region": "us-east-1"
+                    }
+                },
+                "PinpointTargeting": {
+                    "Default": {
+                        "Region": "us-east-1"
+                    }
                 }
             }
         }
@@ -68,9 +85,22 @@ const amplifyconfig = ''' {
     "storage": {
         "plugins": {
             "awsS3StoragePlugin": {
-                "bucket": "storage00643-staging",
+                "bucket": "mbmstorage50058-staging",
                 "region": "us-east-1",
                 "defaultAccessLevel": "guest"
+            }
+        }
+    },
+    "analytics": {
+        "plugins": {
+            "awsPinpointAnalyticsPlugin": {
+                "pinpointAnalytics": {
+                    "appId": "fd3d3e0ee0bb4818ac7367daa80fac46",
+                    "region": "us-east-1"
+                },
+                "pinpointTargeting": {
+                    "region": "us-east-1"
+                }
             }
         }
     }

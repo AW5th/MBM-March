@@ -24,25 +24,7 @@ class GeneratedProfileminsangchoicopyWidget1 extends StatelessWidget {
               bottom: 0.0,
               width: null,
               height: null,
-              child: LayoutBuilder(
-                  builder: (BuildContext context, BoxConstraints constraints) {
-                double percentWidth = 1.0;
-                double scaleX = (constraints.maxWidth * percentWidth) / 100.0;
-
-                double percentHeight = 1.0;
-                double scaleY = (constraints.maxHeight * percentHeight) / 100.0;
-
-                return Stack(children: [
-                  TransformHelper.translateAndScale(
-                      translateX: 0,
-                      translateY: 0,
-                      translateZ: 0,
-                      scaleX: scaleX,
-                      scaleY: scaleY,
-                      scaleZ: 1,
-                      child: GeneratedMaskWidget8())
-                ]);
-              }),
+              child: GeneratedMaskWidget8(),
             ),
             Positioned(
               left: 0.0,

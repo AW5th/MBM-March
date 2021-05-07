@@ -12,7 +12,7 @@ class GeneratedUploadSoundWidget extends StatelessWidget {
       textAlign: TextAlign.left,
       style: TextStyle(
         height: 0.6111111111111112,
-        fontSize: 36.0,
+        fontSize: 32.0,
         fontFamily: 'SF Compact Rounded',
         fontWeight: FontWeight.w400,
         color: Color.fromARGB(255, 0, 0, 0),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_two/models/ModelProvider.dart';
-import 'package:flutter_app_two/models/Genres.dart';
 import 'package:amplify_core/amplify_core.dart';
 import 'package:flutter_app_two/amplifyconfiguration.dart';
 import 'package:amplify_datastore/amplify_datastore.dart';
@@ -125,61 +124,16 @@ class MyApp extends State<Testing_Page> {
 
 
     void create(String genreString) async {
-    Genres genreObject = Genres(id: _genreID, Genre: genreString);
-      //adds genre
-      genreObject.addGenre(genreString);
 
-    try {
-      await Amplify.DataStore.save(genreObject);
-
-      print('Saved ${genreObject.toString()}');
-    }
-    catch(e){
-      print(e);
-    }
   }
 
   void readAll() async {
-    try {
-      final genreObjects = await Amplify.DataStore.query(Genres.classType);
 
-      print(genreObjects.toString());
-    }
-    catch (e) {
-      print(e);
-    }
   }
 
-  Future<Genres> readByID() async {
-    try {
-      final genreObjects = await Amplify.DataStore.query(Genres.classType, where: Genres.ID.eq(_genreID));
-
-      if(genreObjects.isEmpty) {
-        print("No objects with ID: $_genreID");
-        return null;
-      }
-
-      final genreObject = genreObjects.first;
-      print(genreObject.toString());
-      return genreObject;
-    }
-    catch(e){
-      print(e);
-      throw e;
-    }
-  }
   //Same as create, but must have same ID
   void update() async {
-    try{
-      final genreObject = await readByID();
 
-      final updatedObject = genreObject.copyWith(Genre: genreObject.Genre + ' [UPDATED]n');
-      await Amplify.DataStore.save(updatedObject);
-      print('Updated object to ${updatedObject.toString()}');
-    }
-    catch (e) {
-      print(e);
-    }
   }
 
   void delete() async {
