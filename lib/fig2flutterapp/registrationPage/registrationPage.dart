@@ -17,6 +17,8 @@ import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/Genera
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedLine24Widget.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget1.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedIcon1024x1024FullWidget2.dart';
+import 'package:flutter_app_two/models/ModelProvider.dart';
+import 'package:amplify_datastore/amplify_datastore.dart';
 //import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedGroup7Widget.dart'
 /* Registration   Page  */
 
@@ -84,6 +86,11 @@ class MyApp extends State<registrationPage> {
     // in our case... just one - Auth
     AmplifyAuthCognito authPlugin = AmplifyAuthCognito();
     amplifyInstance.addPlugin(authPlugins: [authPlugin]);
+
+    ModelProvider provider = ModelProvider();
+    AmplifyDataStore dataStorePlugin = AmplifyDataStore(modelProvider: provider);
+    Amplify.DataStore.addPlugin(dataStorePlugin);
+
     await amplifyInstance.configure(amplifyconfig);
     try {
       setState(() {
@@ -252,32 +259,7 @@ class MyApp extends State<registrationPage> {
                   color: Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
-              //Added Skip button
-              Positioned(
-                left: 287.0,
-                top: 56.0,
-                right: null,
-                bottom: null,
-                width: 86.0,
-                height: 30.0,
-                child: GestureDetector(
-                  //TODO - Change the route to pick what page you wanna go
-                  onTap: () => Navigator.pushNamed(context, '/GeneratedDashboardZachWidget4 '),
-                  child: Text(
-                    '''Skip''',
-                    overflow: TextOverflow.visible,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      height: 1.2222222222222223,
-                      fontSize: 18.0,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w400,
 
-                      /* letterSpacing: -0.40799999237060547, */
-                    ),
-                  ),
-                ),
-              ),
               //Next Button
               Positioned(
                 left: 32.0,
@@ -288,9 +270,6 @@ class MyApp extends State<registrationPage> {
                 height: 52.0,
                 child: GestureDetector(
                   onTap: () => _signUp(context),
-                  /*
-                  onTap: () => Navigator.pushNamed(
-                      context, '/Artist_Listener'), */
                   child: Container(
                     width: 308.0,
                     height: 52.0,
@@ -321,7 +300,6 @@ class MyApp extends State<registrationPage> {
                   ),
                 ),
               ),
-
               //Enter Email
               Positioned(
                 left: 17.0,

@@ -87,7 +87,7 @@ class Login_CreateAccount extends StatelessWidget {
                 height: 30.0,
                 child: GestureDetector(
                   //TODO - Change the route to pick what page you wanna go
-                  onTap: () => Navigator.pushNamed(context, '/ProfileUploadSound'),
+                  onTap: () => Navigator.pushNamed(context, '/Artist_Listener'),
                   child: Text(
                     '''redirect''',
                     overflow: TextOverflow.visible,

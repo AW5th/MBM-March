@@ -1,0 +1,21 @@
+{
+    "appName": "mbm",
+    "roleName": "pinpointLambdaRolefba21f2e",
+    "cloudformationPolicyName": "cloudformationPolicyfba21f2e",
+    "cloudWatchPolicyName": "cloudWatchPolicyfba21f2e",
+    "pinpointPolicyName": "pinpointPolicyfba21f2e",
+    "authPolicyName": "pinpoint_amplify_fba21f2e",
+    "unauthPolicyName": "pinpoint_amplify_fba21f2e",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

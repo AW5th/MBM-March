@@ -24,6 +24,8 @@ import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/Genera
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget1.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedIcon1024x1024FullWidget2.dart';
 import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
+import 'package:flutter_app_two/models/ModelProvider.dart';
+import 'package:amplify_datastore/amplify_datastore.dart';
 /* Login Page  */
 
 void main() {
@@ -83,6 +85,11 @@ class MyApp extends State<loginPage> {
     // in our case... just one - Auth
     AmplifyAuthCognito authPlugin = AmplifyAuthCognito();
     amplifyInstance.addPlugin(authPlugins: [authPlugin]);
+
+    ModelProvider provider = ModelProvider();
+    AmplifyDataStore dataStorePlugin = AmplifyDataStore(modelProvider: provider);
+    Amplify.DataStore.addPlugin(dataStorePlugin);
+
     await amplifyInstance.configure(amplifyconfig);
     try {
       setState(() {
