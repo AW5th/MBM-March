@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/Generated1erinsteedWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/Generated2erinsteedWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/Generated5erinsteedWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/GeneratedIntersectWidget26.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/GeneratedGroup1533Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/GeneratedTopArtistsTodayWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/Generated3erinsteedWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/Generated1erinsteedWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/Generated2erinsteedWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/Generated5erinsteedWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/GeneratedIntersectWidget26.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/GeneratedGroup1533Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/GeneratedTopArtistsTodayWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/Generated3erinsteedWidget.dart';
 
 /* Competitions box */
 class GeneratedGroup1532Widget extends StatelessWidget {

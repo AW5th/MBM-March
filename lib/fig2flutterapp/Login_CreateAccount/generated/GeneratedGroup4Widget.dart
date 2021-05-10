@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Login_CreateAccount/generated/GeneratedIntersectWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Login_CreateAccount/generated/GeneratedIntersectWidget.dart';
 
 /* Button Colors */
 class GeneratedGroup4Widget extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedProfileminsangchoicopyWidget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedEllipse1Widget1.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedProfileminsangchoicopyWidget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedEllipse1Widget1.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
 
 /* Profile picture
   */

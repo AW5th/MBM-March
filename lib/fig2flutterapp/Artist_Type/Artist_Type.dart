@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Type/generated/GeneratedSkipWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Type/generated/GeneratedGroup1534Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Type/generated/GeneratedIcon1024x1024FullWidget5.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Type/generated/GeneratedStatusBarWidget.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Type/generated/GeneratedSkipWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Type/generated/GeneratedGroup1534Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Type/generated/GeneratedIcon1024x1024FullWidget5.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Type/generated/GeneratedStatusBarWidget.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
 
 /* Artist_Type  */
 class Artist_Type extends StatelessWidget {

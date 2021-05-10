@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedNextWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedNextWidget.dart';
+import 'package:page_transition/page_transition.dart';
 
 /* The Next Button
   */
@@ -11,7 +13,7 @@ class GeneratedGroup7Widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () =>
-          Navigator.pushNamed(context, '/Artist_Listener'),
+          Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Artist_Listener())),
       child: Container(
         width: 308.0,
         height: 52.0,

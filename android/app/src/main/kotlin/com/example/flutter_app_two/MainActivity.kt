@@ -1,4 +1,4 @@
-package com.example.flutter_app_two
+package com.example.MusicByMasses
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedGroup4Widget3.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedArtistWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedArtistWidget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/generated/GeneratedGroup4Widget3.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/generated/GeneratedArtistWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/generated/GeneratedArtistWidget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Selected/Artist_Selected.dart';
+import 'package:page_transition/page_transition.dart';
 
 /* Artist_Button */
 class Artist_Button extends StatelessWidget {
@@ -9,7 +11,7 @@ class Artist_Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () =>
-          Navigator.pushNamed(context, '/Artist_Selected'),
+          Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Artist_Selected())),
       child: Container(
         width: 199.0,
         height: 52.0,

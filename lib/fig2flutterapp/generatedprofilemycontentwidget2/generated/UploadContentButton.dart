@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/UploadBackground.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/UploadText.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofilemycontentwidget2/generated/UploadBackground.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofilemycontentwidget2/generated/UploadText.dart';
 
 /* upload button
   */

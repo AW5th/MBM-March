@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/GeneratedEllipse1Widget.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/GeneratedProfileminsangchoicopyWidget.dart';
-import 'package:flutter_app_two/helpers/svg/svg.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/GeneratedEllipse1Widget.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/GeneratedProfileminsangchoicopyWidget.dart';
+import 'package:MusicByMasses/helpers/svg/svg.dart';
 
 /* Profile button
   */

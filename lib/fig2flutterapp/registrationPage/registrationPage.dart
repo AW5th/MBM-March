@@ -1,25 +1,27 @@
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_core/amplify_core.dart';
-import 'package:flutter_app_two/amplifyconfiguration.dart';
+import 'package:MusicByMasses/amplifyconfiguration.dart';
+import 'package:MusicByMasses/fig2flutterapp/Login_CreateAccount/Login_CreateAccount.dart';
 import 'dart:developer';
 import 'package:flutter_login/flutter_login.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedNextWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedSignUpWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedConfirmPasswordWidget.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedLine25Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedLine24Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedIcon1024x1024FullWidget2.dart';
-import 'package:flutter_app_two/models/ModelProvider.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedNextWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedSignUpWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedConfirmPasswordWidget.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedLine25Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedLine24Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedIcon1024x1024FullWidget2.dart';
+import 'package:MusicByMasses/models/ModelProvider.dart';
 import 'package:amplify_datastore/amplify_datastore.dart';
-//import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedGroup7Widget.dart'
+//import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedGroup7Widget.dart'
 /* Registration   Page  */
 
 void main() {
@@ -88,7 +90,8 @@ class MyApp extends State<registrationPage> {
     amplifyInstance.addPlugin(authPlugins: [authPlugin]);
 
     ModelProvider provider = ModelProvider();
-    AmplifyDataStore dataStorePlugin = AmplifyDataStore(modelProvider: provider);
+    AmplifyDataStore dataStorePlugin =
+        AmplifyDataStore(modelProvider: provider);
     Amplify.DataStore.addPlugin(dataStorePlugin);
 
     await amplifyInstance.configure(amplifyconfig);
@@ -131,12 +134,12 @@ class MyApp extends State<registrationPage> {
                 "Close",
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
-              onPressed: () => Navigator.pushNamed(context, '/loginPage'),
+              onPressed: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: '/loginPage'),
               width: 120,
             )
           ],
         ).show();
-        Navigator.pushNamed(context, '/loginPage');
+        Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: '/loginPage');
       }
     } on AuthError catch (e) {
       print(e);
@@ -154,6 +157,7 @@ class MyApp extends State<registrationPage> {
       ),
     );
   }
+  var _confirm = true;
 
   void _signUp(BuildContext context) async {
     try {
@@ -162,39 +166,38 @@ class MyApp extends State<registrationPage> {
         "preferred_username": usernameController.text.trim(),
         // additional attributes as needed
       };
+
+      if(!(passwordController.text.compareTo(confirmPasswordController.text) == 0)) {
+        setState(() {
+          _confirm = false;
+        });
+        return;
+      }
+
       SignUpResult res = await Amplify.Auth.signUp(
           username: emailController.text.trim(),
           password: passwordController.text.trim(),
           options: CognitoSignUpOptions(userAttributes: userAttributes));
-      _go_to_NextScreen(context);
-      print(res.isSignUpComplete);
+
+      if (res.isSignUpComplete) {
+        print("You signed up!");
+        showDialog<void>(
+            context: context, builder: (context) => dialog(context));
+      } else {
+        print("Sign up  is not complete");
+      }
+
+      print("Sign up result: " + res.isSignUpComplete.toString());
+
       setState(() {
         _isSignedUp = true;
       });
-
-      if (isSignUpComplete) {
-        print("You signed in!");
-
-        Alert(
-          context: context,
-          type: AlertType.success,
-          title:
-              "You've succesfully signed up, check you're email for confirmtion code.",
-          buttons: [
-            DialogButton(
-              child: Text(
-                "Close",
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
-              onPressed: () =>
-                  Navigator.pushNamed(context, '/Login_CreateAccount'),
-              width: 120,
-            )
-          ],
-        ).show();
-      }
     } on AuthError catch (error) {
-      _setError(error);
+        _setError(error);
+        popUp(error.exceptionList.first.detail.toString());
+    } finally{
+      if(!_confirm)
+        popUp("Passwords not the same.");
     }
   }
 
@@ -229,239 +232,301 @@ class MyApp extends State<registrationPage> {
   }
 */
 
-  String validatePassword(String value) {
-    if (value.isEmpty) {
-      return "* Required";
-    } else if (value.length < 6) {
-      return "Password should be atleast 6 characters";
-    } else if (value.length > 15) {
-      return "Password should not be greater than 15 characters";
-    } else
-      return null;
+  //functions to goes back to previous
+  Future<bool> _goBack() {
+    Navigator.push(
+        context,
+        PageTransition(
+            type: PageTransitionType.fade,
+            duration: Duration(milliseconds: 100),
+            child: Login_CreateAccount()));
+  }
+
+  //SIGN UP SUCCESS
+  AlertDialog dialog(BuildContext context) => AlertDialog(
+        title: Text("You're registered!"),
+        content: Text(
+            "You've succesfully signed up, check you're email for confirmtion code."),
+        actions: [
+          FlatButton(
+            textColor: Color.fromARGB(255, 255, 121, 0),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.fade,
+                      duration: Duration(milliseconds: 100),
+                      child: Artist_Listener()));
+              //Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: '/Artist_Listener');
+            },
+            child: Text('Confirm'),
+          ),
+          FlatButton(
+            textColor: Color.fromARGB(255, 255, 121, 0),
+            onPressed: () => Navigator.pop(context),
+            child: Text('Cancel'),
+          ),
+        ],
+      );
+
+  //Pop up if registration messes up
+
+  AlertDialog signUpError(BuildContext context, String error) {
+    String messsage = '';
+    print("ERROR: " + error.toString());
+    if(error.contains("UsernameExistsException"))
+      messsage = "An account with the given email already exists.";
+    else if(error.contains("Member must have length greater than or equal to 6 ") || error.contains("Password not long enough"))
+      messsage = "The password given is invalid. Password must have length greater than or equal to 8 ";
+    else if(error.contains("Password must have numeric characters"))
+        messsage = "The password given is invalid. Password must have numeric characters";
+    else if(error.contains("not the same"))
+      messsage = "The password and confirmation password do not match.";
+
+    return AlertDialog(
+      title: Text('Registration failed'),
+      content: Text("Error: " + messsage),
+      actions: [
+        FlatButton(
+          textColor: Color.fromARGB(255, 255, 121, 0),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Close'),
+        ),
+      ],
+    );
+  }
+
+  void popUp(String error) {
+    showDialog<void>(
+        context: context, builder: (context) => signUpError(context, error));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-        child: ClipRRect(
-      borderRadius: BorderRadius.zero,
-      child: Container(
-        width: 375.0,
-        height: 812.0,
-        child: Stack(
-            fit: StackFit.expand,
-            alignment: Alignment.center,
-            overflow: Overflow.visible,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.zero,
-                child: Container(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                ),
-              ),
-
-              //Next Button
-              Positioned(
-                left: 32.0,
-                top: 524.0,
-                right: null,
-                bottom: null,
-                width: 308.0,
-                height: 52.0,
-                child: GestureDetector(
-                  onTap: () => _signUp(context),
+    return WillPopScope(
+      onWillPop: _goBack,
+      child: Material(
+        child: Container(
+          width: 375.0,
+          height: 812.0,
+          child: Stack(
+              fit: StackFit.expand,
+              alignment: Alignment.center,
+              overflow: Overflow.visible,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.zero,
                   child: Container(
-                    width: 308.0,
-                    height: 52.0,
-                    child: Stack(
-                        fit: StackFit.expand,
-                        alignment: Alignment.center,
-                        overflow: Overflow.visible,
-                        children: [
-                          Positioned(
-                            left: 0.0,
-                            top: 0.0,
-                            right: null,
-                            bottom: null,
-                            width: 308.0,
-                            height: 52.0,
-                            child: GeneratedGroup4Widget2(),
-                          ),
-                          Positioned(
-                            left: 74.0,
-                            top: 14.0,
-                            right: null,
-                            bottom: null,
-                            width: 166.0,
-                            height: 30.0,
-                            child: GeneratedNextWidget(),
-                          )
-                        ]),
+                    color: Color.fromARGB(255, 255, 255, 255),
                   ),
                 ),
-              ),
-              //Enter Email
-              Positioned(
-                left: 17.0,
-                top: 231.0,
-                right: null,
-                bottom: null,
-                width: 350.0,
-                height: 40.0,
-                child: TextFormField(
-                  decoration: new InputDecoration(
-                    labelText: "Enter Email",
-                    fillColor: Colors.white,
-                    border: new OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(25.0),
-                      borderSide: new BorderSide(),
+
+                //Next Button
+                Positioned(
+                  left: 32.0,
+                  top: 524.0,
+                  right: null,
+                  bottom: null,
+                  width: 308.0,
+                  height: 52.0,
+                  child: GestureDetector(
+                    onTap: () {
+                      print("Signing up...");
+                      _signUp(context);
+                    },
+                    child: Container(
+                      width: 308.0,
+                      height: 52.0,
+                      child: Stack(
+                          fit: StackFit.expand,
+                          alignment: Alignment.center,
+                          overflow: Overflow.visible,
+                          children: [
+                            Positioned(
+                              left: 0.0,
+                              top: 0.0,
+                              right: null,
+                              bottom: null,
+                              width: 308.0,
+                              height: 52.0,
+                              child: GeneratedGroup4Widget2(),
+                            ),
+                            Positioned(
+                              left: 74.0,
+                              top: 14.0,
+                              right: null,
+                              bottom: null,
+                              width: 166.0,
+                              height: 30.0,
+                              child: GeneratedNextWidget(),
+                            )
+                          ]),
                     ),
-                    //fillColor: Colors.green
-                  ),
-                  controller: emailController,
-                  keyboardType: TextInputType.emailAddress,
-                  style: new TextStyle(
-                    fontFamily: "Poppins",
                   ),
                 ),
-              ),
-              //Sign Up Title
-              Positioned(
-                left: 32.0,
-                top: 157.0,
-                right: null,
-                bottom: null,
-                width: 230.0,
-                height: 24.0,
-                child: GeneratedSignUpWidget(),
-              ),
-              //Enter Username
-              Positioned(
-                left: 17.0,
-                top: 288.0,
-                right: null,
-                bottom: null,
-                width: 350.0,
-                height: 40.0,
-                child: TextFormField(
-                  decoration: new InputDecoration(
-                    labelText: "Enter Username",
-                    fillColor: Colors.white,
-                    border: new OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(25.0),
-                      borderSide: new BorderSide(),
+                //Enter Email
+                Positioned(
+                  left: 17.0,
+                  top: 231.0,
+                  right: null,
+                  bottom: null,
+                  width: 350.0,
+                  height: 40.0,
+                  child: TextFormField(
+                    decoration: new InputDecoration(
+                      labelText: "Enter Email",
+                      fillColor: Colors.white,
+                      border: new OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(25.0),
+                        borderSide: new BorderSide(),
+                      ),
+                      //fillColor: Colors.green
                     ),
-                    //fillColor: Colors.green
-                  ),
-                  controller: usernameController,
-                  keyboardType: TextInputType.name,
-                  style: new TextStyle(
-                    fontFamily: "Poppins",
-                  ),
-                ),
-              ),
-              /*
-              const Padding(padding: EdgeInsets.all(10.0)),
-              FlatButton(
-                textColor: Colors.black, // Theme.of(context).primaryColor,
-                color: Colors.amber,
-                onPressed: () => _signUp,
-                child: Text(
-                  'Create Account',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ),
-              FlatButton(
-                height: 5,
-                onPressed: _signUp,
-                child: Text(
-                  'Already registered? Sign In',
-                  style: Theme.of(context).textTheme.subtitle2,
-                ),
-              ), */
-              //Enter password
-              Positioned(
-                left: 17.0,
-                top: 345.0,
-                right: null,
-                bottom: null,
-                width: 350.0,
-                height: 40.0,
-                child: TextFormField(
-                  obscureText: true,
-                  decoration: new InputDecoration(
-                    hintText: "Enter Password",
-                    fillColor: Colors.white,
-                    border: new OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(25.0),
-                      borderSide: new BorderSide(),
+                    controller: emailController,
+                    keyboardType: TextInputType.emailAddress,
+                    style: new TextStyle(
+                      fontFamily: "Poppins",
                     ),
-                    //fillColor: Colors.green
-                  ),
-                  validator: validatePassword,
-                  controller: passwordController,
-                  keyboardType: TextInputType.visiblePassword,
-                  style: new TextStyle(
-                    fontFamily: "Poppins",
                   ),
                 ),
-              ),
-              //Confirm password
-              Positioned(
-                left: 17.0,
-                top: 405.0,
-                right: null,
-                bottom: null,
-                width: 350.0,
-                height: 40.0,
-                child: TextFormField(
-                  obscureText: true,
-                  decoration: new InputDecoration(
-                    hintText: "Confirm Password",
-                    fillColor: Colors.white,
-                    border: new OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(25.0),
-                      borderSide: new BorderSide(),
+                //Sign Up Title
+                Positioned(
+                  left: 32.0,
+                  top: 157.0,
+                  right: null,
+                  bottom: null,
+                  width: 230.0,
+                  height: 24.0,
+                  child: GeneratedSignUpWidget(),
+                ),
+                //Enter Username
+                Positioned(
+                  left: 17.0,
+                  top: 288.0,
+                  right: null,
+                  bottom: null,
+                  width: 350.0,
+                  height: 40.0,
+                  child: TextFormField(
+                    decoration: new InputDecoration(
+                      labelText: "Enter Username",
+                      fillColor: Colors.white,
+                      border: new OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(25.0),
+                        borderSide: new BorderSide(),
+                      ),
+                      //fillColor: Colors.green
                     ),
-                    //fillColor: Colors.green
-                  ),
-                  validator: validatePassword,
-                  controller: confirmPasswordController,
-                  keyboardType: TextInputType.visiblePassword,
-                  style: new TextStyle(
-                    fontFamily: "Poppins",
+                    controller: usernameController,
+                    keyboardType: TextInputType.name,
+                    style: new TextStyle(
+                      fontFamily: "Poppins",
+                    ),
                   ),
                 ),
-              ),
-              //LOGO
-              Positioned(
-                //ok
-                left: 0.0,
-                top: 0.0,
-                right: 0.0,
-                bottom: 0.0,
-                width: null,
-                height: null,
-                child: LayoutBuilder(builder:
-                    (BuildContext context, BoxConstraints constraints) {
-                  final double width = constraints.maxWidth * 0.296;
-                  final double height =
-                      constraints.maxHeight * 0.09236453201970443;
-                  return Stack(children: [
-                    TransformHelper.translate(
-                        x: constraints.maxWidth * 0.352,
-                        y: constraints.maxHeight * 0.04433497536945813,
-                        z: 0,
-                        child: Container(
-                          width: width,
-                          height: height,
-                          child: GeneratedIcon1024x1024FullWidget2(),
-                        ))
-                  ]);
-                }),
-              )
-            ]),
+                /*
+                const Padding(padding: EdgeInsets.all(10.0)),
+                FlatButton(
+                  textColor: Colors.black, // Theme.of(context).primaryColor,
+                  color: Colors.amber,
+                  onPressed: () => _signUp,
+                  child: Text(
+                    'Create Account',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+                FlatButton(
+                  height: 5,
+                  onPressed: _signUp,
+                  child: Text(
+                    'Already registered? Sign In',
+                    style: Theme.of(context).textTheme.subtitle2,
+                  ),
+                ), */
+                //Enter password
+                Positioned(
+                  left: 17.0,
+                  top: 345.0,
+                  right: null,
+                  bottom: null,
+                  width: 350.0,
+                  height: 40.0,
+                  child: TextFormField(
+                    obscureText: true,
+                    decoration: new InputDecoration(
+                      hintText: "Enter Password",
+                      fillColor: Colors.white,
+                      border: new OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(25.0),
+                        borderSide: new BorderSide(),
+                      ),
+                      //fillColor: Colors.green
+                    ),
+                    controller: passwordController,
+                    keyboardType: TextInputType.visiblePassword,
+                    style: new TextStyle(
+                      fontFamily: "Poppins",
+                    ),
+                  ),
+                ),
+                //Confirm password
+                Positioned(
+                  left: 17.0,
+                  top: 405.0,
+                  right: null,
+                  bottom: null,
+                  width: 350.0,
+                  height: 40.0,
+                  child: TextFormField(
+                    obscureText: true,
+                    decoration: new InputDecoration(
+                      hintText: "Confirm Password",
+                      fillColor: Colors.white,
+                      border: new OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(25.0),
+                        borderSide: new BorderSide(),
+                      ),
+                      //fillColor: Colors.green
+                    ),
+                    controller: confirmPasswordController,
+                    keyboardType: TextInputType.visiblePassword,
+                    style: new TextStyle(
+                      fontFamily: "Poppins",
+                    ),
+                  ),
+                ),
+                //LOGO
+                Positioned(
+                  //ok
+                  left: 0.0,
+                  top: 0.0,
+                  right: 0.0,
+                  bottom: 0.0,
+                  width: null,
+                  height: null,
+                  child: LayoutBuilder(builder:
+                      (BuildContext context, BoxConstraints constraints) {
+                    final double width = constraints.maxWidth * 0.296;
+                    final double height =
+                        constraints.maxHeight * 0.09236453201970443;
+                    return Stack(children: [
+                      TransformHelper.translate(
+                          x: constraints.maxWidth * 0.352,
+                          y: constraints.maxHeight * 0.04433497536945813,
+                          z: 0,
+                          child: Container(
+                            width: width,
+                            height: height,
+                            child: GeneratedIcon1024x1024FullWidget2(),
+                          ))
+                    ]);
+                  }),
+                )
+              ]),
+        ),
       ),
-    ));
+    );
   }
 }

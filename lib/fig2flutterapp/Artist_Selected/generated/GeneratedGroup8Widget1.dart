@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Listener_Selected/generated/GeneratedIcon1024x1024FullWidget4.dart';
-import 'package:flutter_app_two/fig2flutterapp/Listener_Selected/generated/GeneratedGroup8Widget1.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/Listener_Selected/generated/GeneratedGroup9Widget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/Listener_Selected/generated/GeneratedGroup7Widget2.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedIamaanWidget.dart';
-import 'package:flutter_app_two/helpers/svg/svg.dart';
+import 'package:MusicByMasses/fig2flutterapp/Listener_Selected/generated/GeneratedIcon1024x1024FullWidget4.dart';
+import 'package:MusicByMasses/fig2flutterapp/Listener_Selected/generated/GeneratedGroup8Widget1.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/Listener_Selected/generated/GeneratedGroup9Widget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Listener_Selected/generated/GeneratedGroup7Widget2.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/generated/GeneratedIamaanWidget.dart';
+import 'package:MusicByMasses/helpers/svg/svg.dart';
 
 /* outline of artist */
 class GeneratedGroup8Widget1 extends StatelessWidget {

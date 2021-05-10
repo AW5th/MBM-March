@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/GeneratedMaskWidget.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/GeneratedMaskWidget1.dart';
-import 'package:flutter_app_two/helpers/svg/svg.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/generated/GeneratedProfileminsangchoiWidget.dart';
-import 'package:flutter_app_two/helpers/mask/mask.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/GeneratedMaskWidget.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/GeneratedMaskWidget1.dart';
+import 'package:MusicByMasses/helpers/svg/svg.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/generated/GeneratedProfileminsangchoiWidget.dart';
+import 'package:MusicByMasses/helpers/mask/mask.dart';
 
 /* Feed Profile Pic*/
 class GeneratedProfileminsangchoicopyWidget extends StatelessWidget {

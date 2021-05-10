@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedGroup4Widget4.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedListenerWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/generated/GeneratedGroup4Widget4.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/generated/GeneratedListenerWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Listener_Selected/Listener_Selected.dart';
+import 'package:page_transition/page_transition.dart';
 
 /* Listener button  */
 class Listener_Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, '/Listener_Selected'),
+      onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Listener_Selected())),
       child: Container(
         width: 199.0,
         height: 52.0,

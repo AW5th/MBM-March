@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/registrationPage.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/registrationPage.dart';
 
 /* Email Address Textbox  */
 

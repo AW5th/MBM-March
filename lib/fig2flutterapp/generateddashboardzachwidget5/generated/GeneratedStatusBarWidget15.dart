@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'GeneratedWifiWidget15.dart';
 import 'GeneratedTimeStyleWidget15.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
 import 'GeneratedCellularConnectionWidget15.dart';
 import 'GeneratedBatteryWidget15.dart';
 

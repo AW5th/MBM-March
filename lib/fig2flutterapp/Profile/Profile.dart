@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/ListenCount.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofilemycontentwidget2/generated/UploadContentButton.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/UserInfo.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedGroup5Widget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/EditButtonOnProfile.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedStatusBarWidget8.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/MusicIcon.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GroupContainingContentOnProfile.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedIconLightchevronleftWidget6.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/Feed_Dashboard.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/ListenCount.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/ProfileEditandSettings.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofilemycontentwidget1/ProfileUploadSound.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofilemycontentwidget2/generated/UploadContentButton.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/UserInfo.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedGroup5Widget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/EditButtonOnProfile.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedStatusBarWidget8.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/MusicIcon.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GroupContainingContentOnProfile.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedIconLightchevronleftWidget6.dart';
+import 'package:page_transition/page_transition.dart';
 
 import 'generated/UserInfo.dart';
 
@@ -38,7 +42,8 @@ class Profile extends StatelessWidget {
                 width: 24.0,
                 height: 24.0,
                 child: GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, '/ProfileEditandSettings'),
+                  onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: ProfileEditandSettings())),
+                      //Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: '/ProfileEditandSettings'),
                   child: EditButtonOnProfile(),
                 ),
               ),
@@ -51,7 +56,8 @@ class Profile extends StatelessWidget {
                 width: 11.9765625,
                 height: 20.7890625,
                 child: GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, '/Feed_Dashboard'),
+                  onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Feed_Dashboard())),
+                      //Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: '/Feed_Dashboard'),
                   child: Opacity(
                     opacity: 0.800000011920929,
                     child: Container(
@@ -104,8 +110,8 @@ class Profile extends StatelessWidget {
                 width: 308.0,
                 height: 52.0,
                 child: GestureDetector(
-                  onTap: () =>
-                      Navigator.pushNamed(context, '/ProfileUploadSound'),
+                  onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: ProfileUploadSound())),
+                  //Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: '/ProfileUploadSound'),
                   child: UploadContentButton(),
                 ),
               ),

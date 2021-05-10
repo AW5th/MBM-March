@@ -1,30 +1,31 @@
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_core/amplify_core.dart';
-import 'package:flutter_app_two/amplifyconfiguration.dart';
+import 'package:MusicByMasses/amplifyconfiguration.dart';
+import 'package:MusicByMasses/fig2flutterapp/Login_CreateAccount/Login_CreateAccount.dart';
 import 'package:flutter_login/flutter_login.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:page_transition/page_transition.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedLine26Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedPasswordWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedNextWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedGroup7Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedLine27Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Feed_Dashboard/Feed_Dashboard.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedSignUpWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/loginPage/generated/GeneratedLogInWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/loginPage/generated/Login_Next_Button.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedLine26Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedPasswordWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedNextWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedGroup7Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedLine27Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/Feed_Dashboard.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedSignUpWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/loginPage/generated/GeneratedLogInWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/loginPage/generated/Login_Next_Button.dart';
 
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedConfirmPasswordWidget.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedLine25Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedLine24Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedIcon1024x1024FullWidget2.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
-import 'package:flutter_app_two/models/ModelProvider.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedConfirmPasswordWidget.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedLine25Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedLine24Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedIcon1024x1024FullWidget2.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
+import 'package:MusicByMasses/models/ModelProvider.dart';
 import 'package:amplify_datastore/amplify_datastore.dart';
 /* Login Page  */
 
@@ -100,16 +101,6 @@ class MyApp extends State<loginPage> {
     }
   }
 
-  void _go_to_NextScreen(BuildContext context) {
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (_) {
-          return Feed_Dashboard();
-        },
-      ),
-    );
-  }
-
   void _signIn(BuildContext context) async {
     // Sign out before in case a user is already signed in
     // If a user is already signed in - Amplify.Auth.signIn will throw an exception
@@ -123,183 +114,210 @@ class MyApp extends State<loginPage> {
       SignInResult res = await Amplify.Auth.signIn(
           username: emailController.text.trim(),
           password: passwordController.text.trim());
-      _go_to_NextScreen(context);
+      //Goes to next screen after sign in
+      Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Feed_Dashboard()));
     } on AuthError catch (e) {
       setState(() {
         _signUpError = e.cause;
         _signUpExceptions.clear();
         e.exceptionList.forEach((el) {
           _signUpExceptions.add(el.exception);
-        });
+        }
+        );
+        popUp(e.cause);
       });
     }
+  }
+
+  AlertDialog dialog(BuildContext context, String error) => AlertDialog(
+    title: Text('Sign in failed'),
+    content: Text("Incorrect email or password. Type the correct email and password, and try again: " + error),
+    actions: [
+      FlatButton(
+        textColor: Color.fromARGB(255, 255, 121, 0),
+        onPressed: () { Navigator.pop(context); },
+        child: Text('Close'),
+      ),
+    ],
+  );
+
+  void popUp(String error){
+    showDialog<void>(context: context, builder: (context) => dialog(context, error));
+  }
+
+  //functions to goes back to previous
+  Future<bool> _goBack(){
+    Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Login_CreateAccount()));
   }
 
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-        child: ClipRRect(
-      borderRadius: BorderRadius.zero,
-      child: Container(
-        width: 375.0,
-        height: 812.0,
-        child: Stack(
-            fit: StackFit.expand,
-            alignment: Alignment.center,
-            overflow: Overflow.visible,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.zero,
-                child: Container(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                ),
-              ),
-              //Next Button
-              Positioned(
-                left: 32.0,
-                top: 524.0,
-                right: null,
-                bottom: null,
-                width: 308.0,
-                height: 52.0,
-                child: GestureDetector(
-                  onTap: () => _signIn(context),
-                  /*
-                  onTap: () => Navigator.pushNamed(
-                      context, '/Artist_Listener'), */
+    return WillPopScope(
+      onWillPop: _goBack,
+      child: Material(
+          child: ClipRRect(
+        borderRadius: BorderRadius.zero,
+        child: Container(
+          width: 375.0,
+          height: 812.0,
+          child: Stack(
+              fit: StackFit.expand,
+              alignment: Alignment.center,
+              overflow: Overflow.visible,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.zero,
                   child: Container(
-                    width: 308.0,
-                    height: 52.0,
-                    child: Stack(
-                        fit: StackFit.expand,
-                        alignment: Alignment.center,
-                        overflow: Overflow.visible,
-                        children: [
-                          Positioned(
-                            left: 0.0,
-                            top: 0.0,
-                            right: null,
-                            bottom: null,
-                            width: 308.0,
-                            height: 52.0,
-                            child: GeneratedGroup4Widget2(),
-                          ),
-                          Positioned(
-                            left: 74.0,
-                            top: 14.0,
-                            right: null,
-                            bottom: null,
-                            width: 166.0,
-                            height: 30.0,
-                            child: GeneratedNextWidget(),
-                          )
-                        ]),
+                    color: Color.fromARGB(255, 255, 255, 255),
                   ),
                 ),
-              ),
-              //Email textbox
-              Positioned(
-                left: 17.0,
-                top: 231.0,
-                right: null,
-                bottom: null,
-                width: 350.0,
-                height: 40.0,
-                child: TextFormField(
-                  decoration: new InputDecoration(
-                    labelText: "Enter Email/Username",
-                    fillColor: Colors.white,
-                    border: new OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(25.0),
-                      borderSide: new BorderSide(),
+                //Next Button
+                Positioned(
+                  left: 32.0,
+                  top: 524.0,
+                  right: null,
+                  bottom: null,
+                  width: 308.0,
+                  height: 52.0,
+                  child: GestureDetector(
+                    onTap: () => _signIn(context),
+                    /*
+                    onTap: () => Navigator.pushNamed(
+                        context, '/Artist_Listener'), */
+                    child: Container(
+                      width: 308.0,
+                      height: 52.0,
+                      child: Stack(
+                          fit: StackFit.expand,
+                          alignment: Alignment.center,
+                          overflow: Overflow.visible,
+                          children: [
+                            Positioned(
+                              left: 0.0,
+                              top: 0.0,
+                              right: null,
+                              bottom: null,
+                              width: 308.0,
+                              height: 52.0,
+                              child: GeneratedGroup4Widget2(),
+                            ),
+                            Positioned(
+                              left: 74.0,
+                              top: 14.0,
+                              right: null,
+                              bottom: null,
+                              width: 166.0,
+                              height: 30.0,
+                              child: GeneratedNextWidget(),
+                            )
+                          ]),
                     ),
-                    //fillColor: Colors.green
-                  ),
-                  validator: (val) {
-                    if (val.length == 0) {
-                      return "Email cannot be empty";
-                    } else {
-                      return null;
-                    }
-                  },
-                  controller: emailController,
-                  keyboardType: TextInputType.emailAddress,
-                  style: new TextStyle(
-                    fontFamily: "Poppins",
                   ),
                 ),
-              ),
-              Positioned(
-                left: 32.0,
-                top: 157.0,
-                right: null,
-                bottom: null,
-                width: 230.0,
-                height: 24.0,
-                child: GeneratedLogInWidget(),
-              ),
-              //Password textbox
-              Positioned(
-                left: 17.0,
-                top: 288.0,
-                right: null,
-                bottom: null,
-                width: 350.0,
-                height: 40.0,
-                child: TextFormField(
-                  obscureText: true,
-                  decoration: new InputDecoration(
-                    hintText: "Enter Password",
-                    fillColor: Colors.white,
-                    border: new OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(25.0),
-                      borderSide: new BorderSide(),
+                //Email textbox
+                Positioned(
+                  left: 17.0,
+                  top: 231.0,
+                  right: null,
+                  bottom: null,
+                  width: 350.0,
+                  height: 40.0,
+                  child: TextFormField(
+                    decoration: new InputDecoration(
+                      labelText: "Enter Email/Username",
+                      fillColor: Colors.white,
+                      border: new OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(25.0),
+                        borderSide: new BorderSide(),
+                      ),
+                      //fillColor: Colors.green
                     ),
-                    //fillColor: Colors.green
-                  ),
-                  validator: (val) {
-                    if (val.length == 0) {
-                      return "Password cannot be empty";
-                    } else {
-                      return null;
-                    }
-                  },
-                  controller: passwordController,
-                  keyboardType: TextInputType.visiblePassword,
-                  style: new TextStyle(
-                    fontFamily: "Poppins",
+                    validator: (val) {
+                      if (val.length == 0) {
+                        return "Email cannot be empty";
+                      } else {
+                        return null;
+                      }
+                    },
+                    controller: emailController,
+                    keyboardType: TextInputType.emailAddress,
+                    style: new TextStyle(
+                      fontFamily: "Poppins",
+                    ),
                   ),
                 ),
-              ),
-              Positioned(
-                //ok
-                left: 0.0,
-                top: 0.0,
-                right: 0.0,
-                bottom: 0.0,
-                width: null,
-                height: null,
-                child: LayoutBuilder(builder:
-                    (BuildContext context, BoxConstraints constraints) {
-                  final double width = constraints.maxWidth * 0.296;
-                  final double height =
-                      constraints.maxHeight * 0.09236453201970443;
-                  return Stack(children: [
-                    TransformHelper.translate(
-                        x: constraints.maxWidth * 0.352,
-                        y: constraints.maxHeight * 0.04433497536945813,
-                        z: 0,
-                        child: Container(
-                          width: width,
-                          height: height,
-                          child: GeneratedIcon1024x1024FullWidget2(),
-                        ))
-                  ]);
-                }),
-              )
-            ]),
-      ),
-    ));
+                Positioned(
+                  left: 32.0,
+                  top: 157.0,
+                  right: null,
+                  bottom: null,
+                  width: 230.0,
+                  height: 24.0,
+                  child: GeneratedLogInWidget(),
+                ),
+                //Password textbox
+                Positioned(
+                  left: 17.0,
+                  top: 288.0,
+                  right: null,
+                  bottom: null,
+                  width: 350.0,
+                  height: 40.0,
+                  child: TextFormField(
+                    obscureText: true,
+                    decoration: new InputDecoration(
+                      hintText: "Enter Password",
+                      fillColor: Colors.white,
+                      border: new OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(25.0),
+                        borderSide: new BorderSide(),
+                      ),
+                      //fillColor: Colors.green
+                    ),
+                    validator: (val) {
+                      if (val.length == 0) {
+                        return "Password cannot be empty";
+                      } else {
+                        return null;
+                      }
+                    },
+                    controller: passwordController,
+                    keyboardType: TextInputType.visiblePassword,
+                    style: new TextStyle(
+                      fontFamily: "Poppins",
+                    ),
+                  ),
+                ),
+                Positioned(
+                  //ok
+                  left: 0.0,
+                  top: 0.0,
+                  right: 0.0,
+                  bottom: 0.0,
+                  width: null,
+                  height: null,
+                  child: LayoutBuilder(builder:
+                      (BuildContext context, BoxConstraints constraints) {
+                    final double width = constraints.maxWidth * 0.296;
+                    final double height =
+                        constraints.maxHeight * 0.09236453201970443;
+                    return Stack(children: [
+                      TransformHelper.translate(
+                          x: constraints.maxWidth * 0.352,
+                          y: constraints.maxHeight * 0.04433497536945813,
+                          z: 0,
+                          child: Container(
+                            width: width,
+                            height: height,
+                            child: GeneratedIcon1024x1024FullWidget2(),
+                          ))
+                    ]);
+                  }),
+                )
+              ]),
+        ),
+      )),
+    );
   }
 }

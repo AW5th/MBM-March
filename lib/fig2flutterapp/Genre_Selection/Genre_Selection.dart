@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup6Widget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup16Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup17Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedIcon1024x1024FullWidget6.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup12Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup18Widget.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup19Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup15Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup13Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedSkipWidget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup20Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup11Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/FunkButton.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGenreWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup21Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Genre_Selection/generated/GeneratedGroup14Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup6Widget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup16Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup17Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedIcon1024x1024FullWidget6.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup12Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup18Widget.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup19Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup15Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup13Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedSkipWidget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup20Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup11Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/FunkButton.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGenreWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup21Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/generated/GeneratedGroup14Widget.dart';
 
 /* Genre_Selection page */
 class Genre_Selection extends StatelessWidget {

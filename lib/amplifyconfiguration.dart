@@ -4,7 +4,7 @@ const amplifyconfig = ''' {
     "api": {
         "plugins": {
             "awsAPIPlugin": {
-                "mbm": {
+              "mbm": {
                     "endpointType": "GraphQL",
                     "endpoint": "https://rrzowckmgbesvlrq35gi4bo6lu.appsync-api.us-east-1.amazonaws.com/graphql",
                     "region": "us-east-1",

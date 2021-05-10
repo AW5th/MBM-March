@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedLine20Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedGroup1529Widget4.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedGroup2Widget5.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedGroup1494Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedLine22Widget.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedTitleWidget17.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedTitleWidget18.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedEditeditWidget8.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedIcon1024x1024FullWidget18.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedStatusBarWidget13.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedIconDarkChevronWidget11.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedLine21Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedTitleWidget16.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedLine20Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedGroup1529Widget4.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedGroup2Widget5.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedGroup1494Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedLine22Widget.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedTitleWidget17.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedTitleWidget18.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedEditeditWidget8.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedIcon1024x1024FullWidget18.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedStatusBarWidget13.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedIconDarkChevronWidget11.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedLine21Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/generated/GeneratedTitleWidget16.dart';
 
 /* rofile- Edit and Settings
   */

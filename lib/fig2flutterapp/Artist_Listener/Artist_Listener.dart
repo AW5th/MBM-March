@@ -1,12 +1,16 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedIcon1024x1024FullWidget3.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/Artist_Button.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedGroup7Widget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/GeneratedIamaanWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Artist_Listener/generated/Listener_Button.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedNextWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/generated/GeneratedIcon1024x1024FullWidget3.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Type/Artist_Type.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/generated/Artist_Button.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/generated/GeneratedGroup7Widget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/generated/GeneratedIamaanWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/generated/Listener_Button.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedNextWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
+import 'package:page_transition/page_transition.dart';
 
 /* Artist_Listener */
 /*
@@ -124,90 +128,80 @@ class _ArtistSelectedState extends State<Artist_Listener> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Material(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            ToggleButtons(
-              color: Colors.black,
-              borderColor: Colors.grey,
-              borderWidth: 7,
-              fillColor: Colors.white,
-              selectedBorderColor: Colors.orange,
-              selectedColor: Colors.black,
-              borderRadius: BorderRadius.circular(100),
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    'Artist',
-                    style: TextStyle(fontSize: 30),
-                  ),
+      child: Stack(alignment: Alignment.center, children: [
+        Container(
+          width: width,
+          height: 100,
+          alignment: Alignment.center,
+          child: ToggleButtons(
+            color: Colors.black,
+            borderColor: Colors.grey,
+            borderWidth: 4,
+            fillColor: Colors.white,
+            selectedBorderColor:
+            //Color.lerp(Color.fromARGB(255, 255, 121, 0), Color.fromARGB(255, 255, 213, 106), 0.25),
+            //alphaBlend(Color.fromARGB(255, 255, 121, 0), Color.fromARGB(255, 255, 213, 106)),
+            Color.fromARGB(255, 255, 121, 0),
+            selectedColor: Colors.black,
+            borderRadius: BorderRadius.circular(100),
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Text(
+                  'Artist',
+                  style: TextStyle(fontSize: 30),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    'Listener',
-                    style: TextStyle(fontSize: 30),
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Text(
+                  'Listener',
+                  style: TextStyle(fontSize: 30),
                 ),
-              ],
-              onPressed: (int index) {
-                setState(() {
-                  for (int i = 0; i < isSelected.length; i++) {
-                    isSelected[i] = (i == index);
-                  }
-                });
-              },
-              isSelected: isSelected,
-            ),
-            Container(
-              width: 0,
-              height: 0,
-              child:
-              GestureDetector(
-                onTap: () => Navigator.pushNamed(
-                    context, '/Artist_Type'),
-
-              //Next Button
-                 child: Positioned(
-                left: 0.0,
-                top: 0.0,
-                right: null,
-                bottom: null,
-                width: 0.0,
-                height: 0.0,
-                child: Stack(
-                        fit: StackFit.expand,
-                        alignment: Alignment.center,
-                        overflow: Overflow.visible,
-                        children: [
-                          Positioned(
-                            left: 0.0,
-                            top: 0.0,
-                            right: null,
-                            bottom: null,
-                            width: 0.0,
-                            height: 0.0,
-                            child: GeneratedGroup4Widget2(),
-                          ),
-                          Positioned(
-                            left: 74.0,
-                            top: 14.0,
-                            right: null,
-                            bottom: null,
-                            width: 166.0,
-                            height: 30.0,
-                            child: GeneratedNextWidget(),
-                          )
-                        ]),
-
-                ),
-              ), ),
-          ],
+              ),
+            ],
+            onPressed: (int index) {
+              setState(() {
+                for (int i = 0; i < isSelected.length; i++) {
+                  isSelected[i] = (i == index);
+                }
+              });
+            },
+            isSelected: isSelected,
+          ),
         ),
-      ),
+        GestureDetector(
+          onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Artist_Type())),
+          //Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: '/Artist_Type'),
+          //Next Button
+          child: Stack(
+              fit: StackFit.expand,
+              alignment: Alignment.bottomCenter,
+              overflow: Overflow.visible,
+              children: [
+                Positioned(
+                  left: 45.0,
+                  top: 650.0,
+                  right: null,
+                  bottom: null,
+                  width: 0.0,
+                  height: 0.0,
+                  child: GeneratedGroup4Widget2(),
+                ),
+                Positioned(
+                  left: 120.0,
+                  top: 665.0,
+                  right: null,
+                  bottom: null,
+                  width: 166.0,
+                  height: 30.0,
+                  child: GeneratedNextWidget(),
+                )
+              ]),
+        ),
+      ]),
     );
   }
 }

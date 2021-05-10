@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/models/ModelProvider.dart';
+import 'package:MusicByMasses/fig2flutterapp/Login_CreateAccount/Login_CreateAccount.dart';
+import 'package:MusicByMasses/models/ModelProvider.dart';
 
 import 'package:amplify_core/amplify_core.dart';
 import 'package:amplify_datastore/amplify_datastore.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/Testing_Page2/generated/GeneratedIcon1024x1024FullWidget2.dart';
-import 'package:flutter_app_two/amplifyconfiguration.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/Testing_Page2/generated/GeneratedIcon1024x1024FullWidget2.dart';
+import 'package:MusicByMasses/amplifyconfiguration.dart';
+import 'package:page_transition/page_transition.dart';
 /* Testing Page      */
 
 void main() {
@@ -42,7 +44,7 @@ class MyApp extends State<Testing_Page2> {
                 child: GestureDetector(
                   //TODO - Change the route to pick what page you wanna go
                   onTap: () =>
-                      Navigator.pushNamed(context, '/Login_CreateAccount'),
+                      Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Login_CreateAccount())),
                   child: Text(
                     '''Back''',
                     overflow: TextOverflow.visible,

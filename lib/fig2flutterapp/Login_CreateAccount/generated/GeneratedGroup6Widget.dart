@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_app_two/fig2flutterapp/Login_CreateAccount/generated/GeneratedGroup4Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Login_CreateAccount/generated/GeneratedGroup4Widget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/Login_CreateAccount/generated/GeneratedCreateAccountWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Login_CreateAccount/generated/GeneratedGroup4Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Login_CreateAccount/generated/GeneratedGroup4Widget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Login_CreateAccount/generated/GeneratedCreateAccountWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/registrationPage/registrationPage.dart';
+import 'package:page_transition/page_transition.dart';
 
 /* Create account button */
 class GeneratedGroup6Widget extends StatelessWidget {
@@ -10,7 +12,7 @@ class GeneratedGroup6Widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () =>
-          Navigator.pushNamed(context, '/registrationPage'),
+          Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: registrationPage())),
       child: Container(
         width: 308.0,
         height: 52.0,

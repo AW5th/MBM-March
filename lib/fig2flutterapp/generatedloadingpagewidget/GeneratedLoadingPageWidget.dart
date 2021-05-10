@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/generatedloadingpagewidget/generated/GeneratedIcon1024x1024FullWidget.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:MusicByMasses/fig2flutterapp/Login_CreateAccount/Login_CreateAccount.dart';
 
 /* LANDING PAGE */
 class GeneratedLoadingPageWidget extends StatelessWidget {
@@ -46,7 +47,25 @@ class GeneratedLoadingPageWidget extends StatelessWidget {
                         child: Container(
                           width: width,
                           height: height,
-                          child: GeneratedIcon1024x1024FullWidget(),
+                          child: GestureDetector(
+                            onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Login_CreateAccount())),
+                                //Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: '/Login_CreateAccount'),
+                            child: Container(
+                              width: 250.0,
+                              height: 168.40277099609375,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.zero,
+                                child: Image.asset(
+                                  "assets/images/3b1cb0210eac4e1c95cb95efbe5afeb7",
+                                  color: null,
+                                  fit: BoxFit.fill,
+                                  width: 250.0,
+                                  height: 168.40277099609375,
+                                  colorBlendMode: BlendMode.dstATop,
+                                ),
+                              ),
+                            ),
+                          ),
                         ))
                   ]);
                 }),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'GeneratedNewMusicGuySentWidget5.dart';
 import 'GeneratedGroup4Widget45.dart';
 
@@ -9,8 +10,8 @@ class GeneratedGroup1524Widget11 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () =>
-          Navigator.pushNamed(context, '/GeneratedProfileMycontentWidget'),
+      onTap: () => {},
+          //Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: '/GeneratedProfileMycontentWidget')),
       child: Container(
         width: 308.0,
         height: 52.0,

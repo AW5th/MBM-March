@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedGroup1486Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedHomeIndicatorWidget2.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedGroup1541Widget.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedIntersectWidget36.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedDirectionWidget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedGroup1524Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedGroup1526Widget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedStatusBarWidget2.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedIcon1024x1024FullWidget8.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedIconDarkChevronWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile_Page/generated/GeneratedGroup1498Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile_Page/generated/GeneratedGroup1486Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile_Page/generated/GeneratedHomeIndicatorWidget2.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile_Page/generated/GeneratedGroup1541Widget.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile_Page/generated/GeneratedIntersectWidget36.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile_Page/generated/GeneratedDirectionWidget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile_Page/generated/GeneratedGroup1524Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile_Page/generated/GeneratedGroup1526Widget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile_Page/generated/GeneratedStatusBarWidget2.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile_Page/generated/GeneratedIcon1024x1024FullWidget8.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile_Page/generated/GeneratedIconDarkChevronWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile_Page/generated/GeneratedGroup1498Widget.dart';
 
 /* Profile_Page */
 class Profile_Page extends StatelessWidget {

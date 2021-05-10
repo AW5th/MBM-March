@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedSongWidget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedLabelTitleWidget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedGroup1524Widget3.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedGroup1529Widget1.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedLabelTitleWidget.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedGroup2Widget.dart';
-import 'package:flutter_app_two/helpers/transform/transform.dart';
-import 'package:flutter_app_two/fig2flutterapp/Profile/generated/GeneratedJacobStevensWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedSongWidget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedLabelTitleWidget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedGroup1524Widget3.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedGroup1529Widget1.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedLabelTitleWidget.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedGroup2Widget.dart';
+import 'package:MusicByMasses/helpers/transform/transform.dart';
+import 'package:MusicByMasses/fig2flutterapp/Profile/generated/GeneratedJacobStevensWidget.dart';
 
 /* user info
   */
