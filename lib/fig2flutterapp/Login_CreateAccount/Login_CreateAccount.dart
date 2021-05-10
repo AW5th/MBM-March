@@ -1,3 +1,4 @@
+import 'package:MusicByMasses/fig2flutterapp/Genre_Selection/Genre_Selection.dart';
 import 'package:flutter/material.dart';
 import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
 import 'package:MusicByMasses/fig2flutterapp/Feed_Dashboard/Feed_Dashboard.dart';
@@ -100,7 +101,7 @@ class Login_CreateAccount extends StatelessWidget {
                   height: 30.0,
                   child: GestureDetector(
                     //TODO - Change the route to pick what page you wanna go
-                    onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Feed_Dashboard())),
+                    onTap: () => Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Genre_Selection())),
                         //Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: '/Artist_Listener'),
                     child: Text(
                       '''redirect''',

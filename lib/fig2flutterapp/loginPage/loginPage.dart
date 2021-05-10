@@ -1,10 +1,11 @@
+import 'package:MusicByMasses/helpers/svg/svg.dart';
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_core/amplify_core.dart';
 import 'package:MusicByMasses/amplifyconfiguration.dart';
 import 'package:MusicByMasses/fig2flutterapp/Login_CreateAccount/Login_CreateAccount.dart';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:page_transition/page_transition.dart';
-
+import 'package:MusicByMasses/fig2flutterapp/Next_Button.dart';
 import 'package:flutter/material.dart';
 import 'package:MusicByMasses/fig2flutterapp/Artist_Listener/Artist_Listener.dart';
 import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget.dart';
@@ -24,7 +25,6 @@ import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/Generate
 import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedLine24Widget.dart';
 import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedEmailAddressWidget1.dart';
 import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedIcon1024x1024FullWidget2.dart';
-import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/GeneratedGroup4Widget2.dart';
 import 'package:MusicByMasses/models/ModelProvider.dart';
 import 'package:amplify_datastore/amplify_datastore.dart';
 /* Login Page  */
@@ -88,7 +88,8 @@ class MyApp extends State<loginPage> {
     amplifyInstance.addPlugin(authPlugins: [authPlugin]);
 
     ModelProvider provider = ModelProvider();
-    AmplifyDataStore dataStorePlugin = AmplifyDataStore(modelProvider: provider);
+    AmplifyDataStore dataStorePlugin =
+        AmplifyDataStore(modelProvider: provider);
     Amplify.DataStore.addPlugin(dataStorePlugin);
 
     await amplifyInstance.configure(amplifyconfig);
@@ -115,41 +116,54 @@ class MyApp extends State<loginPage> {
           username: emailController.text.trim(),
           password: passwordController.text.trim());
       //Goes to next screen after sign in
-      Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Feed_Dashboard()));
+      Navigator.push(
+          context,
+          PageTransition(
+              type: PageTransitionType.fade,
+              duration: Duration(milliseconds: 100),
+              child: Feed_Dashboard()));
     } on AuthError catch (e) {
       setState(() {
         _signUpError = e.cause;
         _signUpExceptions.clear();
         e.exceptionList.forEach((el) {
           _signUpExceptions.add(el.exception);
-        }
-        );
+        });
         popUp(e.cause);
       });
     }
   }
 
   AlertDialog dialog(BuildContext context, String error) => AlertDialog(
-    title: Text('Sign in failed'),
-    content: Text("Incorrect email or password. Type the correct email and password, and try again: " + error),
-    actions: [
-      FlatButton(
-        textColor: Color.fromARGB(255, 255, 121, 0),
-        onPressed: () { Navigator.pop(context); },
-        child: Text('Close'),
-      ),
-    ],
-  );
+        title: Text('Sign in failed'),
+        content: Text(
+            "Incorrect email or password. Type the correct email and password, and try again: " +
+                error),
+        actions: [
+          FlatButton(
+            textColor: Color.fromARGB(255, 255, 121, 0),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text('Close'),
+          ),
+        ],
+      );
 
-  void popUp(String error){
-    showDialog<void>(context: context, builder: (context) => dialog(context, error));
+  void popUp(String error) {
+    showDialog<void>(
+        context: context, builder: (context) => dialog(context, error));
   }
 
   //functions to goes back to previous
-  Future<bool> _goBack(){
-    Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Login_CreateAccount()));
+  Future<bool> _goBack() {
+    Navigator.push(
+        context,
+        PageTransition(
+            type: PageTransitionType.fade,
+            duration: Duration(milliseconds: 100),
+            child: Login_CreateAccount()));
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -172,48 +186,15 @@ class MyApp extends State<loginPage> {
                     color: Color.fromARGB(255, 255, 255, 255),
                   ),
                 ),
-                //Next Button
+                //login text
                 Positioned(
                   left: 32.0,
-                  top: 524.0,
+                  top: 157.0,
                   right: null,
                   bottom: null,
-                  width: 308.0,
-                  height: 52.0,
-                  child: GestureDetector(
-                    onTap: () => _signIn(context),
-                    /*
-                    onTap: () => Navigator.pushNamed(
-                        context, '/Artist_Listener'), */
-                    child: Container(
-                      width: 308.0,
-                      height: 52.0,
-                      child: Stack(
-                          fit: StackFit.expand,
-                          alignment: Alignment.center,
-                          overflow: Overflow.visible,
-                          children: [
-                            Positioned(
-                              left: 0.0,
-                              top: 0.0,
-                              right: null,
-                              bottom: null,
-                              width: 308.0,
-                              height: 52.0,
-                              child: GeneratedGroup4Widget2(),
-                            ),
-                            Positioned(
-                              left: 74.0,
-                              top: 14.0,
-                              right: null,
-                              bottom: null,
-                              width: 166.0,
-                              height: 30.0,
-                              child: GeneratedNextWidget(),
-                            )
-                          ]),
-                    ),
-                  ),
+                  width: 230.0,
+                  height: 24.0,
+                  child: GeneratedLogInWidget(),
                 ),
                 //Email textbox
                 Positioned(
@@ -233,28 +214,12 @@ class MyApp extends State<loginPage> {
                       ),
                       //fillColor: Colors.green
                     ),
-                    validator: (val) {
-                      if (val.length == 0) {
-                        return "Email cannot be empty";
-                      } else {
-                        return null;
-                      }
-                    },
                     controller: emailController,
                     keyboardType: TextInputType.emailAddress,
                     style: new TextStyle(
                       fontFamily: "Poppins",
                     ),
                   ),
-                ),
-                Positioned(
-                  left: 32.0,
-                  top: 157.0,
-                  right: null,
-                  bottom: null,
-                  width: 230.0,
-                  height: 24.0,
-                  child: GeneratedLogInWidget(),
                 ),
                 //Password textbox
                 Positioned(
@@ -275,13 +240,6 @@ class MyApp extends State<loginPage> {
                       ),
                       //fillColor: Colors.green
                     ),
-                    validator: (val) {
-                      if (val.length == 0) {
-                        return "Password cannot be empty";
-                      } else {
-                        return null;
-                      }
-                    },
                     controller: passwordController,
                     keyboardType: TextInputType.visiblePassword,
                     style: new TextStyle(
@@ -289,6 +247,23 @@ class MyApp extends State<loginPage> {
                     ),
                   ),
                 ),
+                //Next Button
+                Positioned(
+                  left: 32.0,
+                  top: 524.0,
+                  right: null,
+                  bottom: null,
+                  width: 308.0,
+                  height: 52.0,
+                  child: GestureDetector(
+                    onTap: () => _signIn(context),
+                    /*
+                    onTap: () => Navigator.pushNamed(
+                        context, '/Artist_Listener'), */
+                    child: Next_Button(),
+                  ),
+                ),
+                //logo
                 Positioned(
                   //ok
                   left: 0.0,

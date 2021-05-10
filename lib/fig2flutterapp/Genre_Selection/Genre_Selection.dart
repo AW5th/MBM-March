@@ -22,8 +22,6 @@ class Genre_Selection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-        child: ClipRRect(
-      borderRadius: BorderRadius.zero,
       child: Container(
         width: 375.0,
         height: 812.0,
@@ -32,11 +30,9 @@ class Genre_Selection extends StatelessWidget {
             alignment: Alignment.center,
             overflow: Overflow.visible,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.zero,
-                child: Container(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                ),
+              //Background Color
+              Container(
+                color: Color.fromARGB(255, 255, 255, 255),
               ),
               //Skip button
               Positioned(
@@ -48,6 +44,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 30.0,
                 child: GeneratedSkipWidget1(),
               ),
+              //logo
               Positioned(
                 left: 0.0,
                 top: 0.0,
@@ -75,6 +72,7 @@ class Genre_Selection extends StatelessWidget {
                   ]);
                 }),
               ),
+              //Genre Title
               Positioned(
                 left: 34.0,
                 top: 213.0,
@@ -84,6 +82,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 27.0,
                 child: GeneratedGenreWidget(),
               ),
+              //pop
               Positioned(
                 left: 34.0,
                 top: 263.0,
@@ -93,6 +92,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 31.399999618530273,
                 child: GeneratedGroup11Widget(),
               ),
+              //RnB
               Positioned(
                 left: 34.0,
                 top: 338.0,
@@ -102,6 +102,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 31.399444580078125,
                 child: GeneratedGroup14Widget(),
               ),
+              //Rock
               Positioned(
                 left: 34.0,
                 top: 414.0,
@@ -111,6 +112,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 31.399444580078125,
                 child: GeneratedGroup17Widget(),
               ),
+              //Soul
               Positioned(
                 left: 34.0,
                 top: 490.0,
@@ -120,6 +122,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 31.399444580078125,
                 child: GeneratedGroup20Widget(),
               ),
+              //Rap
               Positioned(
                 left: 142.0,
                 top: 262.0,
@@ -129,6 +132,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 33.447235107421875,
                 child: GeneratedGroup12Widget(),
               ),
+              //Country
               Positioned(
                 left: 142.0,
                 top: 338.0,
@@ -138,6 +142,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 33.447235107421875,
                 child: GeneratedGroup15Widget(),
               ),
+              //Indie
               Positioned(
                 left: 142.0,
                 top: 414.0,
@@ -147,15 +152,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 33.447235107421875,
                 child: GeneratedGroup18Widget(),
               ),
-              Positioned(
-                left: 34.0,
-                top: 655.0,
-                right: null,
-                bottom: null,
-                width: 308.0,
-                height: 52.0,
-                child: GeneratedGroup6Widget1(),
-              ),
+              //Latin
               Positioned(
                 left: 142.0,
                 top: 490.0,
@@ -165,6 +162,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 33.447235107421875,
                 child: GeneratedGroup21Widget(),
               ),
+              //EDM
               Positioned(
                 left: 250.0,
                 top: 262.0,
@@ -174,6 +172,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 31.399444580078125,
                 child: GeneratedGroup13Widget(),
               ),
+              //Metal
               Positioned(
                 left: 250.0,
                 top: 338.0,
@@ -183,6 +182,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 31.399444580078125,
                 child: GeneratedGroup16Widget(),
               ),
+              //Jazz
               Positioned(
                 left: 250.0,
                 top: 414.0,
@@ -192,6 +192,7 @@ class Genre_Selection extends StatelessWidget {
                 height: 31.399444580078125,
                 child: GeneratedGroup19Widget(),
               ),
+              //Funk
               Positioned(
                 left: 250.0,
                 top: 490.0,
@@ -200,9 +201,19 @@ class Genre_Selection extends StatelessWidget {
                 width: 92.0,
                 height: 31.399444580078125,
                 child: GeneratedGroup22Widget(),
+              ),
+              //Save Button
+              Positioned(
+                left: 34.0,
+                top: 655.0,
+                right: null,
+                bottom: null,
+                width: 308.0,
+                height: 52.0,
+                child: GeneratedGroup6Widget1(),
               )
             ]),
       ),
-    ));
+    );
   }
 }
