@@ -13,104 +13,6 @@ import 'package:MusicByMasses/fig2flutterapp/registrationPage/generated/Generate
 import 'package:page_transition/page_transition.dart';
 
 /* Artist_Listener */
-/*
-class Artist_Listener extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-        child:
-
-
-      borderRadius: BorderRadius.zero,
-      child: Container(
-        width: 375.0,
-        height: 812.0,
-        child: Stack(
-            fit: StackFit.expand,
-            alignment: Alignment.center,
-            overflow: Overflow.visible,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.zero,
-                child: Container(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                ),
-              ),
-              //Logo
-              Positioned(
-                left: 0.0,
-                top: 0.0,
-                right: 0.0,
-                bottom: 0.0,
-                width: null,
-                height: null,
-                child: LayoutBuilder(builder:
-                    (BuildContext context, BoxConstraints constraints) {
-                  final double width = constraints.maxWidth * 0.296;
-
-                  final double height =
-                      constraints.maxHeight * 0.09236453201970443;
-
-                  return Stack(children: [
-                    TransformHelper.translate(
-                        x: constraints.maxWidth * 0.352,
-                        y: constraints.maxHeight * 0.04433497536945813,
-                        z: 0,
-                        child: Container(
-                          width: width,
-                          height: height,
-                          child: GeneratedIcon1024x1024FullWidget3(),
-                        ))
-                  ]);
-                }),
-              ),
-              //I Am Text
-              Positioned(
-                left: 34.0,
-                top: 154.0,
-                right: null,
-                bottom: null,
-                width: 149.0,
-                height: 24.0,
-                child: GeneratedIamaanWidget(),
-              ),
-              //Artist_Button
-              Positioned(
-                left: 88.0,
-                top: 219.0,
-                right: null,
-                bottom: null,
-                width: 199.0,
-                height: 52.0,
-                child: Artist_Button(),
-              ),
-              //Listener
-              Positioned(
-                left: 88.0,
-                top: 290.0,
-                right: null,
-                bottom: null,
-                width: 199.0,
-                height: 52.0,
-                child: Listener_Button(),
-              ),
-              //Next Button
-              Positioned(
-                left: 34.0,
-                top: 490.0,
-                right: null,
-                bottom: null,
-                width: 308.0,
-                height: 52.0,
-                child: GeneratedGroup7Widget1(),
-              )
-            ]),
-      ),
-    ));
-  }
-}
-
- */
 
 class Artist_Listener extends StatefulWidget {
   @override
@@ -118,6 +20,128 @@ class Artist_Listener extends StatefulWidget {
 }
 
 class _ArtistSelectedState extends State<Artist_Listener> {
+  AlertDialog dialog(BuildContext context) => AlertDialog(
+    title: Text('Wait!'),
+    content: Text("You have to finish setting up your profile!"),
+    actions: [
+      FlatButton(
+        textColor: Color.fromARGB(255, 255, 121, 0),
+        onPressed: () { Navigator.pop(context); },
+        child: Text('Close'),
+      ),
+    ],
+  );
+  AlertDialog dialog2(BuildContext context) => AlertDialog(
+    title: Text('You have to make a selection'),
+    content: Text("Are you are a artist or listener?"),
+    actions: [
+      FlatButton(
+        textColor: Color.fromARGB(255, 255, 121, 0),
+        onPressed: () { Navigator.pop(context); },
+        child: Text('Close'),
+      ),
+    ],
+  );
+
+  Future<bool> _goBack() {
+    showDialog<void>(context: context, builder: (context) => dialog(context));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return WillPopScope(
+      onWillPop: _goBack,
+      child: Material(
+          child: Stack(
+              fit: StackFit.expand,
+              alignment: Alignment.center,
+              overflow: Overflow.visible,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.zero,
+                  child: Container(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                  ),
+                ),
+                //Logo
+                Positioned(
+                  left: 0.0,
+                  top: 0.0,
+                  right: 0.0,
+                  bottom: 0.0,
+                  width: null,
+                  height: null,
+                  child: LayoutBuilder(builder:
+                      (BuildContext context, BoxConstraints constraints) {
+                    final double width = constraints.maxWidth * 0.296;
+
+                    final double height =
+                        constraints.maxHeight * 0.09236453201970443;
+
+                    return Stack(children: [
+                      TransformHelper.translate(
+                          x: constraints.maxWidth * 0.352,
+                          y: constraints.maxHeight * 0.04433497536945813,
+                          z: 0,
+                          child: Container(
+                            width: width,
+                            height: height,
+                            child: GeneratedIcon1024x1024FullWidget3(),
+                          ))
+                    ]);
+                  }),
+                ),
+                //I Am Text
+                Positioned(
+                  left: 34.0,
+                  top: 154.0,
+                  right: null,
+                  bottom: null,
+                  width: 149.0,
+                  height: 24.0,
+                  child: GeneratedIamaanWidget(),
+                ),
+                //Artist_Button
+                Positioned(
+                  left: 88.0,
+                  top: 219.0,
+                  right: null,
+                  bottom: null,
+                  width: 199.0,
+                  height: 52.0,
+                  child: Artist_Button(),
+                ),
+                //Listener
+                Positioned(
+                  left: 88.0,
+                  top: 290.0,
+                  right: null,
+                  bottom: null,
+                  width: 199.0,
+                  height: 52.0,
+                  child: Listener_Button(),
+                ),
+                //Next Button
+    GestureDetector(
+    onTap: () {
+      showDialog<void>(context: context, builder: (context) => dialog2(context));
+    },
+    child: Stack(children: [
+                Positioned(
+                  left: 34.0,
+                  top: 490.0,
+                  right: null,
+                  bottom: null,
+                  width: 308.0,
+                  height: 52.0,
+                  child: GeneratedGroup7Widget1(),
+                ) ]),
+    ),
+              ]),
+      ),
+    );
+  }
+
   List<bool> isSelected;
 
   @override
@@ -126,6 +150,7 @@ class _ArtistSelectedState extends State<Artist_Listener> {
     super.initState();
   }
 
+  /*
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -234,5 +259,5 @@ class _ArtistSelectedState extends State<Artist_Listener> {
         ),
       ]),
     );
-  }
+  } */
 }

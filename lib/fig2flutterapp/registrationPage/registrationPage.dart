@@ -157,6 +157,7 @@ class MyApp extends State<registrationPage> {
       ),
     );
   }
+
   var _confirm = true;
 
   void _signUp(BuildContext context) async {

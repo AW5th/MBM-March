@@ -21,10 +21,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Container(
-        width: 375.0,
-        height: 812.0,
-        child: Stack(
+      child: Stack(
             fit: StackFit.expand,
             alignment: Alignment.center,
             overflow: Overflow.visible,
@@ -176,7 +173,7 @@ class Profile extends StatelessWidget {
                     x: 0.00, y: -91.50, z: 0, child: ListenCount()),
               )
             ]),
-      ),
+
     );
   }
 }

@@ -26,11 +26,11 @@ import 'package:MusicByMasses/fig2flutterapp/Messenger_Chat_Opened/Messenger_Cha
 import 'package:MusicByMasses/fig2flutterapp/Profile/Profile.dart';
 import 'package:MusicByMasses/fig2flutterapp/generatedprofilemycontentwidget1/ProfileUploadSound.dart';
 import 'package:MusicByMasses/fig2flutterapp/generatedprofilemycontentwidget2/ProfileUploadCoverArt.dart';
-import 'package:MusicByMasses/fig2flutterapp/generatedprofileotherusercontentwidget/OtherUserProfile.dart';
+import 'package:MusicByMasses/fig2flutterapp/OtherUserProfile/OtherUserProfile.dart';
 import 'package:MusicByMasses/fig2flutterapp/generatedprofilelikedwidget/ProfileMyLiked.dart';
 import 'package:MusicByMasses/fig2flutterapp/generatedprofileeditandsettingswidget/ProfileEditandSettings.dart';
-import 'package:MusicByMasses/fig2flutterapp/generateddashboardzachwidget4/GeneratedDashboardZachWidget4.dart';
-import 'fig2flutterapp/generateddashboardzachwidget5/GeneratedDashboardZachWidget5.dart';
+import 'package:MusicByMasses/fig2flutterapp/View_Song_3/View_Song_3.dart';
+import 'fig2flutterapp/Select_Song_Competition/Select_Song_Competition.dart';
 import 'fig2flutterapp/Genre_Selection/Genre_Selection.dart';
 import 'fig2flutterapp/Testing_Page/Testing_Page.dart';
 import 'fig2flutterapp/Testing_Page2/Testing_Page2.dart';
@@ -91,10 +91,10 @@ class _MyAppState extends State<MyApp> {
         '/OtherUserProfile': (context) => OtherUserProfile(),
         '/ProfileMyLiked': (context) => ProfileMyLiked(),
         '/ProfileEditandSettings': (context) => ProfileEditandSettings(),
-        '/GeneratedDashboardZachWidget4': (context) =>
-            GeneratedDashboardZachWidget4(),
-        '/GeneratedDashboardZachWidget5': (context) =>
-            GeneratedDashboardZachWidget5(),
+        '/View_Song_3': (context) =>
+            View_Song_3(),
+        '/Select_Song_Competition': (context) =>
+            Select_Song_Competition(),
       },
     );
   }

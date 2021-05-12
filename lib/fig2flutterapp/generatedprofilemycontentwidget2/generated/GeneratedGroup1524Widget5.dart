@@ -11,7 +11,7 @@ class GeneratedGroup1524Widget5 extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => {},
-          //Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: GeneratedDashboardZachWidget5())),
+          //Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 100), child: Select_Song_Competition())),
       child: Container(
         width: 308.0,
         height: 52.0,
